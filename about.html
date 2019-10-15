@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>关于我们</title>
+  <!-- 项目初始化样式 -->
+  <link rel="icon" href="images/changtou.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="images/changtou.ico" type="image/x-icon" />
+  <link rel="stylesheet" type="text/css" href="css/whir_css.css" />
+  <link rel="stylesheet" href="css/iSlider.css" />
+  <script src="js/jquery-1.11.1.min.js"></script>
+  <script src="js/jquery.bxslider.js"></script>
+
+  <!-- HTML5 shim 和 Respond.js用于IE8支持HTML5标签和媒介查询  -->
+  <!--[if lt IE 9]>
+      <script src="js/html5shiv3.7.3.min.js"></script>
+      <script src="js/respondv1.4.2.min.js"></script>
+    <![endif]-->
+  <!-- <script>
+//判断访问设备，方便后面针对不同设备调用代码
+var dev = "";
+if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+    //设备为移动端
+    dev = "mobile";
+    $("html").addClass("mobile");
+}
+else {
+    //设备为pc
+    dev = "pc";
+    $("html").addClass("pc");
+}
+
+//定义设备宽度和高度
+var dw = $(window).width(),
+    dh = $(window).height();
+    
+//console.log("当前使用设备为：" + dev + "||设备宽度为：" + dw + "||设备高度为：" + dh);
+</script> -->
+
+  <script src="js/base.js"></script>
+  <script src="js/jquery.SuperSlide.2.1.1.js"></script>
+  <script>
+    //定义栏目ID
+    var navID = 2,
+      menuID = 0;
+  </script>
+</head>
+
+<body class="abobody">
+  <!--头部-->
+  <header class="header bheader">
+    <div class="headerBox ">
+      <div class="TopLeft">
+        <a class="logo" href="index.html"></a>
+        <a href="javascript:;" class="navBtn">
+          <span class="span1"></span> <span class="span2"></span>
+          <span class="span3"></span>
+        </a>
+        <div class="clear"></div>
+      </div>
+      <!--导航-->
+      <div class="mainnav">
+        <ul class="ul clearfix">
+          <li id="nav1">
+            <a class="navA" href="index.html"><span>首页</span><em></em></a>
+          </li>
+          <li id="nav2" class="xiala">
+            <a class="navA" href="#tab1"><span class="aboutSpan">关于我们</span><em></em></a>
+            <div class="xl">
+              <dl class="dl">
+                <dd><a class="xla" href="#tab1">长投介绍</a></dd>
+                <dd><a class="xla" href="#tab2">员工风采</a></dd>
+              </dl>
+            </div>
+          </li>
+
+          <li id="nav3" class="xiala">
+            <a class="navA" href="course.html#tab1"><span class="courseSpan">课程中心</span><em></em></a>
+            <div class="xl">
+              <dl class="dl">
+                <dd><a class="xla" href="course.html#tab1">理财通识课</a></dd>
+                <dd><a class="xla" href="course.html#tab2">理财入门课</a></dd>
+                <dd><a class="xla" href="course.html#tab3">主流投资课</a></dd>
+                <dd>
+                  <a class="xla" href="course.html#tab4">人群定制类课程</a>
+                </dd>
+              </dl>
+            </div>
+          </li>
+          <li id="nav4">
+            <a class="navA" href="job.html"><span>人才招聘</span><em></em></a>
+          </li>
+        </ul>
+        <div class="clear"></div>
+      </div>
+      <!--/导航-->
+      <div class="clear"></div>
+    </div>
+  </header>
+  <script>
+    //手机版导航
+    $(".header .navBtn").click(function () {
+      $(this).toggleClass("navBtnon");
+      $(".header .mainnav")
+        .stop(true)
+        .slideToggle();
+    });
+    //下拉导航
+    $(".mainnav .ul li .navA").click(function (e) {
+      console.log("a");
+      var _this = $(this).parents("li");
+
+      if ($(window).width() < 1000) {
+        if (_this.find("dd").size() > 0) {
+          _this
+            .find(".xl")
+            .stop(true)
+            .slideToggle(0);
+          _this
+            .siblings("li")
+            .find(".xl")
+            .slideUp(0);
+          return false;
+        }
+      }
+    });
+    if (window.location.href.indexOf("about") > -1) {
+      $("#nav2").addClass("on");
+    } else {
+      $("#nav3").addClass("on");
+    }
+  </script>
+  <!--/头部-->
+
+  <!--banner-->
+  <aside class="Banner aboutban">
+    <div class="container">
+      <div class="fl">
+        <h3>理财就是理生活</h3>
+      </div>
+      <img src="images/bannerabo.png" alt="" class="img1" />
+      <img src="images/bannerabo2.png" alt="" class="img2" />
+    </div>
+  </aside>
+  <!--/banner-->
+  <!--网页主体部分-->
+  <section class="Mian">
+    <!-- 关于我们菜单按钮切换功能点 -->
+    <script type="text/javascript">
+      $(function shuaAbout() {
+        var hash = window.location.hash || "";
+        if (hash == "#tab1") {
+          $(".MainContent").hide();
+          $(".MainContent")
+            .eq(0)
+            .show();
+        }
+        if (hash == "#tab2") {
+          $(".MainContent").hide();
+          $(".MainContent")
+            .eq(1)
+            .show();
+        }
+        window.onload = shuaAbout;
+        $(document).ready(function () {
+          $(".mainnav a").click(function () {
+            setTimeout(shuaAbout, 10);
+          });
+        });
+      });
+    </script>
+    <div class="MainContent">
+      <!--公司简介-->
+      <div class="aboutCompany">
+        <div class="title">
+          <h3>关于长投</h3>
+          <h4></h4>
+        </div>
+
+        <div class="introduce">
+          <div class="textWrap">
+            <div>
+              <p class="contentTitle">长投学堂是干嘛的？</p>
+            </div>
+            <div>
+              <p class="content">
+                长投学堂出生在2011年,是国内率先推出定制化课程的在线理财教育机构,我们拥有专业的师资团队,完善的课程体系以及高效的运营模式,我们的课程涵盖理财意识启蒙,海内外投资市场及投资品种研究等方向。换句话说，大家的理财学习需求，在我们这都能一站式搞定。
+              </p>
+            </div>
+          </div>
+          <!-- 视频 -->
+          <div id="videoWrap">
+            <div id="videoBox">
+              <video muted src="http://market-source.oss-cn-hangzhou.aliyuncs.com/nianhui/changtou-about1.mp4" controls class="videoTag"></video>
+            </div>
+            <div id="imgshadow"><img src="images/videoimg.jpg" alt="" /></div>
+          </div>
+          <!-- 弹出 -->
+          <div class="video-btn" id="video-btn">
+            <a class="video-shut" id="video-shut"><img src="images/closeico2.png" /></a>
+            <div class="video-area" id="video-area"></div>
+          </div>
+          <div id="shadow"></div>
+          <!-- 弹出 -->
+          <!-- 视频js -->
+          <script>
+            function IsPC() {
+              var userAgentInfo = navigator.userAgent;
+              var Agents = [
+                "Android",
+                "iPhone",
+                "SymbianOS",
+                "Windows Phone",
+                "iPad",
+                "iPod"
+              ];
+              var flag = true;
+              for (var v = 0; v < Agents.length; v++) {
+                if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                  flag = false;
+                  break;
+                }
+              }
+              return flag;
+            }
+            $(document).ready(function () {
+              var isPC = IsPC();
+              if (isPC) {
+                //这里执行的是PC端的代码；
+                //点击出现弹出框
+                var obtn = document.getElementById("imgshadow");
+                var ovideo = document.getElementById("video-btn");
+                var oatn = document.getElementById("video-area");
+                var oshut = document.getElementById("video-shut");
+                var oshadow = document.getElementById("shadow");
+                obtn.onclick = function () {
+                  ovideo.style.display = "block";
+                  oshadow.style.display = "block";
+                  oatn.innerHTML =
+                    '<video src="http://market-source.oss-cn-hangzhou.aliyuncs.com/nianhui/changtou-about1.mp4" controls="controls" autoplay="autoplay" width="100%" height="100%"></video>';
+                };
+                oshut.onclick = function () {
+                  ovideo.style.display = "none";
+                  oshadow.style.display = "none";
+                };
+                //居中展示
+                $(document).ready(function () {
+                  $(window).resize(function () {
+                    $(".video-btn").css({
+                      position: "absolute",
+                      left: "30%",
+                      top: "50%"
+                    });
+                  });
+                  // 最初运行函数
+                  $(window).resize();
+                });
+              } else {
+                $(function () {
+                  $("#imgshadow img").click(function () {
+                    $(this).css("display", "none");
+                    $("#videoBox")
+                      .fadeIn()
+                      .css("z-index", "100");
+                    $(".videoTag")[0].play();
+                  });
+                });
+              }
+            });
+          </script>
+          <!-- 视频js -->
+        </div>
+      </div>
+      <!--长投创始人-->
+      <div class="FounderBg">
+        <div class="FounderWrap">
+          <div class="title">
+            <p>长投学堂创始人是何方神圣?</p>
+          </div>
+
+          <div class="FounderInfo">
+            <div class="everyOne">
+              <img src="images/jpg/xlb.png" alt="" />
+              <p>长投创始人兼CEO</p>
+              <p>2018年腾讯教育行业领军人物</p>
+              <p>人称微胖界林志颖</p>
+            </div>
+            <div class="everyOne">
+              <img src="images/jpg/smj.png" alt="" />
+              <p>三个宝宝的超人妈妈</p>
+              <p>长投联合创始人兼COO</p>
+              <p>畅销书作家/豆瓣红人</p>
+            </div>
+            <div class="everyOne">
+              <img src="images/jpg/lsf.png" alt="" />
+              <p>长投联合创始人兼CTO</p>
+              <p>曾任职于华为,英国巴克莱银行</p>
+              <p>人称被代码耽误了的颜王</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--长投有什么好东西?-->
+      <div class="project">
+        <div class="projectWrap">
+          <div class="title">
+            <h3>长投学堂有什么好东西呐？</h3>
+            <p>喜马拉雅，支付宝，唯库，果壳饭团等平台都和我们有愉快的合作</p>
+          </div>
+          <div class="prolistWrap">
+            <div class="prolist">
+              <img src="images/jpg/course1.png" alt="" class="img" />
+              <h5>理财通识课</h5>
+              <p>经典书籍拆读</p>
+              <p>口袋小课堂</p>
+            </div>
+            <div class="prolist">
+              <img src="images/jpg/course2.png" alt="" class="img" />
+              <h5>理财入门课</h5>
+              <p>14天小白理财训练营</p>
+              <p>(人生值得投资的9块钱)</p>
+            </div>
+            <div class="prolist">
+              <img src="images/jpg/course3.png" alt="" class="img" />
+              <h5>主线投资大课</h5>
+              <p>基金、股票、保险课</p>
+            </div>
+            <div class="prolist">
+              <img src="images/jpg/course4.png" alt="" class="img" />
+              <h5>人群定制类课程</h5>
+              <p>儿童财商、大学生理财</p>
+              <p>女性理财等</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--公司发展-->
+      <div class="GSfazhan">
+        <div class="container">
+          <div class="MianCon">
+            <!--标题-->
+            <div class="MainTitle">
+              <h3 class="h3">公司发展</h3>
+              <h4 class="h4"></h4>
+            </div>
+            <!--/标题-->
+            <!--内容-->
+            <div class="GSfazhandiv">
+              <ul>
+                <em class="line"></em>
+                <li class="li1">
+                  <em class="circle"></em><em class="circle2"></em>
+                  <div class="font">
+                    <span class="date">2018年</span>
+                    <p class="txt">完成1亿元A轮融资</p>
+                  </div>
+                </li>
+
+                <li class="li2">
+                  <em class="circle"></em><em class="circle2"></em>
+                  <div class="font">
+                    <span class="date">2017年</span>
+                    <p class="txt">
+                      成为国内优秀的在线理财教育平台之一，发展增速500%
+                    </p>
+                  </div>
+                </li>
+
+                <li class="li3">
+                  <em class="circle"></em><em class="circle2"></em>
+                  <div class="font">
+                    <span class="date">2015年</span>
+                    <p class="txt">
+                      14天小白训练营上线，翻转课堂，社群式学习
+                      ，班主任手把手带着学习
+                    </p>
+                  </div>
+                </li>
+
+                <li class="li4">
+                  <em class="circle"></em><em class="circle2"></em>
+                  <div class="font">
+                    <span class="date">2014年</span>
+                    <p class="txt">
+                      课程体系逐渐完善，股票课、儿童财商课等上线
+                    </p>
+                  </div>
+                </li>
+
+                <li class="li5">
+                  <em class="circle"></em><em class="circle2"></em>
+                  <div class="font">
+                    <span class="date">2012年</span>
+                    <p class="txt">
+                      针对零基础小白用户的理财投资教育机构——“长投学堂”当当当成立
+                    </p>
+                  </div>
+                </li>
+
+                <li class="li6">
+                  <em class="circle"></em><em class="circle2"></em>
+                  <div class="font">
+                    <span class="date">2011年</span>
+                    <p class="txt">长投学堂前身“长期资本管理论坛”建立</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!--/内容-->
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+      <!--/公司发展-->
+
+      <!--快捷方式-->
+
+      <!--/快捷方式-->
+    </div>
+    <div class="MainContent">
+      <div class="staff-container">
+        <div class="MainTitle">
+          <h3 class="h3">社团文化</h3>
+          <h4 class="h4"></h4>
+        </div>
+        <div class="society-container">
+          <div class="slideGroup">
+            <!--tab导航结束-->
+            <!--轮播主体内容开始-->
+            <div class="parBd">
+              <div class="slideBox">
+                <a class="sPrev" href="javascript:void(0)"></a>
+                <ul>
+                  <li>
+                    <div class="carousel-container">
+                      <div class="society-one society-bg">
+                        <div class="society-name-container">
+                          <div class="society-name-text">戏精社</div>
+                          <div class="society-page-down">
+                            <img src="images/jpg/pageDn.png" alt="" />
+                          </div>
+                        </div>
+                        <div class="society-content">
+                          <div>
+                            <p>我们只是单纯的戏精而已</p>
+                            <p>放下自己的“人设”包袱</p>
+                            <p>男女反串</p>
+                            <p>浮夸演技</p>
+                            <p>剧情你反转</p>
+                            <p>总有一款适合</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="society-two society-bg">
+                        <div class="society-name-container">
+                          <div class="society-name-text">户外社</div>
+                          <div class="society-page-down2">
+                            <img src="images/jpg/pageDn.png" alt="" />
+                          </div>
+                        </div>
+                        <div class="society-content">
+                          <div>
+                            <p>燃烧卡路里，约吗？</p>
+                            <p>一个走心走肾也走路的组织 。</p>
+                            <p>低碳出行，燃烧卡路里，一起玩耍哈。</p>
+                            <p>
+                              低配版魔都大街小巷小打卡（步行去地铁站也行），中配版江浙沪周边N日游。
+                            </p>
+                            <p>顶配版组个局半马全马走起~</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="carousel-container">
+                      <div class="society-three society-bg">
+                        <div class="society-name-container">
+                          <div class="society-name-text">Python社</div>
+                          <div class="society-page-down">
+                            <img src="images/jpg/pageDn.png" alt="" />
+                          </div>
+                        </div>
+                        <div class="society-content">
+                          <div>
+                            <p>想偷懒吗？想外包苦力活吗？</p>
+                            <p>想提高工作效率吗？</p>
+                            <p>
+                              来学编程吧，编程，可以让你更懒，进入一个更酷的世界。
+                            </p>
+                            <p>有更多的时间来享受生活。</p>
+                            <p>通常学习编程要几个月，</p>
+                            <p>在这里，快则只需几天就能上手，</p>
+                            <p>对工作产生极大的帮助。</p>
+                            <p>
+                              长投Python社，欢迎各位小伙伴来一起互相探讨学习。
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="society-four society-bg">
+                        <div class="society-four society-bg">
+                          <div class="society-name-container">
+                            <div class="society-name-text">羽毛球社</div>
+                            <div class="society-page-down">
+                              <img src="images/jpg/pageDn.png" alt="" />
+                            </div>
+                          </div>
+                          <div class="society-content">
+                            <div>
+                              <p>欢迎参加羽毛(chi)球(gua)社</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="carousel-container">
+                      <div class="society-five society-bg">
+                        <div class="society-name-container">
+                          <div class="society-name-text">咖啡社</div>
+                          <div class="society-page-down">
+                            <img src="images/jpg/pageDn.png" alt="" />
+                          </div>
+                        </div>
+                        <div class="society-content">
+                          <div>
+                            <p>咖啡社，长投最有存在感社团。</p>
+                            <p>
+                              每个早晨日常一杯咖啡是我们活蹦乱跳的能量来源，咖啡文化是我们的精神文化，但，我们不止于此！
+                            </p>
+                            <p>
+                              我们是长投最活跃的社团，是长投防冷场最中坚的力量，有我们，就一定不会有尴尬！
+                            </p>
+                            <p>
+                              咖啡社，不仅续了我们的命，更温暖了整个公司的心！你值得拥有！
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="society-six society-bg">
+                        <div class="society-name-container">
+                          <div class="society-name-text">篮球社</div>
+                          <div class="society-page-down2">
+                            <img src="images/jpg/pageDn.png" alt="" />
+                          </div>
+                        </div>
+                        <div class="society-content">
+                          <div>
+                            <p>长投学堂斗牛犬俱乐部</p>
+                            <p>
+                              以此为重点在斗牛二字，就像斗牛犬，不要怂、就是干！
+                            </p>
+                            <p>
+                              社团宗旨秉承不服输的精神，强身健体，
+                            </p>
+                            <p>欢乐玩耍，保持一颗年轻的心。</p>
+                            <p>
+                              文能伸手挺队友，武能场上定乾坤。
+                            </p>
+                            <p> 每一次肉体的碰撞都能擦出灵魂的火花</p>
+                            <p> 每一个默契的眼神总能得到意外的惊喜</p>
+                            <p> 长投学堂斗牛犬俱乐部欢迎你的加入。</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="carousel-container">
+                      <div class="society-seven society-bg">
+                        <div class="society-name-container">
+                          <div class="society-name-text">麻将社</div>
+                          <div class="society-page-down">
+                            <img src="images/jpg/pageDn.png" alt="" />
+                          </div>
+                        </div>
+                        <div class="society-content">
+                          <div>
+                            <p>一个弘扬国粹，有拼搏精神的社团。</p>
+                            <p>不到最后一圈，你永远不知道谁是赢家。</p>
+                            <p>起早贪黑，只为了5毛1块。</p>
+                            <p>
+                              全公司双手最活跃，数学最好，记忆力最强的社团。
+                            </p>
+                            <p>
+                              在这里，上分即毕业，每个社员的友谊都经得起物质的考验。
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="society-eight society-bg">
+                        <div class="society-name-container">
+                          <div class="society-name-text">卖唱社</div>
+                          <div class="society-page-down2">
+                            <img src="images/jpg/pageDn.png" alt="" />
+                          </div>
+                        </div>
+                        <div class="society-content">
+                          <div>
+                            <p>
+                              一个全是麦霸，梦想靠卖唱财务自由，
+                            </p>
+                            <p>至今连音箱、话筒都没有的社团~</p>
+                            <p>我们文能唱九妹九妹漂亮的妹妹；</p>
+                            <p>武能嚎给我一只雄鹰一个威武的汉子；</p>
+                            <p>我们进可向天再借五百年；</p>
+                            <p>退能一杯敬自由一杯敬死亡；</p>
+                            <p>偷得浮生半日闲</p>
+                            <p>不怕凉凉，不染风霜</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <a class="sNext" href="javascript:void(0)"></a>
+              </div>
+              <!-- tab1内容结束 -->
+            </div>
+            <!-- 主体内轮播结束 -->
+          </div>
+
+          <script type="text/javascript">
+            /* 内层图片滚动切换 */
+            jQuery(".slideGroup .slideBox").slide({
+              mainCell: "ul",
+              vis: 1,
+              prevCell: ".sPrev",
+              nextCell: ".sNext",
+              effect: "leftLoop"
+            });
+            /* 外层tab切换 */
+            jQuery(".slideGroup").slide({
+              titCell: ".parHd li",
+              mainCell: ".parBd",
+              trigger: "click"
+            });
+          </script>
+        </div>
+        <div class="MainTitle">
+          <h3 class="h3">员工风采</h3>
+          <h4 class="h4"></h4>
+        </div>
+        <div class="picture-wall-container">
+          <div class="pic-container first-part">
+            <img class="pic-wall-one" src="images/jpg/1.png" alt="" />
+            <img class="pic-wall-two" src="images/jpg/2.png" alt="" />
+          </div>
+          <div class="pic-container">
+            <div class="pic-second-part">
+              <img class="pic-wall-three" src="images/jpg/3.png" alt="" />
+              <div>
+                <div class="pic-second-part-top">
+                  <img class="pic-wall-four" src="images/jpg/4.png" alt="" />
+                  <img class="pic-wall-five" src="images/jpg/5.png" alt="" />
+                </div>
+                <div class="pic-second-part-bottom">
+                  <img class="pic-wall-logo" src="https://ict-course.ichangtou.com/web/aboutUsLogo.png" alt="" />
+                  <img class="pic-wall-six" src="images/jpg/6.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pic-container">
+            <div class="pic-third-part-left">
+              <div class="pic-third-part-left-top">
+                <img class="pic-wall-seven" src="images/jpg/7.png" alt="" />
+                <img class="pic-wall-eight" src="images/jpg/8.png" alt="" />
+              </div>
+              <div class="pic-third-part-left-bottom">
+                <img class="pic-wall-ten" src="images/jpg/10.png" alt="" />
+              </div>
+            </div>
+            <div class="pic-third-part-right">
+              <img class="pic-wall-nine" src="images/jpg/9.png" alt="" />
+              <img class="pic-wall-eleven" src="images/jpg/11.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="MainTitle">
+          <h3 class="h3">员工故事</h3>
+          <h4 class="h4"></h4>
+        </div>
+        <div class="staff-story-container">
+          <div class="staff-story-left">
+            <img class="staff-story-one" src="images/jpg/staff-story-1.png" alt="" />
+            <img class="staff-story-two" src="images/jpg/staff-story-2.png" alt="" />
+          </div>
+          <div class="staff-story-center">
+            <div id="videoBox2">
+              <video muted src="http://market-source.oss-cn-hangzhou.aliyuncs.com/nianhui/changtou-about2.mp4" autoplay="autoplay"
+                controls class="videoTag2"></video>
+            </div>
+            <div id="imgshadow2"><img src="images/video1.png" alt="" /></div>
+          </div>
+          <!-- 弹出 -->
+          <div class="video-btn" id="video-btn2">
+            <a class="video-shut" id="video-shut2"><img src="images/closeico2.png" /></a>
+            <div class="video-area" id="video-area2"></div>
+          </div>
+          <div id="shadow2"></div>
+          <script>
+            function IsPC() {
+              var userAgentInfo = navigator.userAgent;
+              var Agents = [
+                "Android",
+                "iPhone",
+                "SymbianOS",
+                "Windows Phone",
+                "iPad",
+                "iPod"
+              ];
+              var flag = true;
+              for (var v = 0; v < Agents.length; v++) {
+                if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                  flag = false;
+                  break;
+                }
+              }
+              return flag;
+            }
+            $(document).ready(function () {
+              var isPC = IsPC();
+              if (isPC) {
+                //这里执行的是PC端的代码；
+                //点击出现弹出框
+                var obtn = document.getElementById("imgshadow2");
+                var ovideo = document.getElementById("video-btn2");
+                var oatn = document.getElementById("video-area2");
+                var oshut = document.getElementById("video-shut2");
+                var oshadow = document.getElementById("shadow2");
+                var _posiTop, _posiLeft;
+                obtn.onclick = function () {
+                  ovideo.style.display = "block";
+                  oshadow.style.display = "block";
+                  var _scrollHeight = $(document).scrollTop(), //获取当前窗口距离页面顶部高度
+                    _windowHeight = $(window).height(), //获取当前窗口高度
+                    _windowWidth = $(window).width(), //获取当前窗口宽度
+                    _popupHeight = ovideo.offsetHeight,
+                    _popupWeight = ovideo.offsetWidth,
+                    _posiTop =
+                    (_windowHeight - _popupHeight) / 2 + _scrollHeight,
+                    _posiLeft = (_windowWidth - _popupWeight) / 2;
+                  ovideo.style.left = _posiLeft + "px";
+                  ovideo.style.top = _posiTop + "px";
+                  ovideo.style.display = "block";
+                  oatn.innerHTML =
+                    '<video src="http://market-source.oss-cn-hangzhou.aliyuncs.com/nianhui/changtou-about2.mp4" controls="controls" autoplay="autoplay" width="100%" height="100%"></video>';
+                };
+                oshut.onclick = function () {
+                  ovideo.style.display = "none";
+                  oshadow.style.display = "none";
+                };
+                //居中展示
+                $(document).ready(function () {
+                  $(window).resize(function () {
+                    $("video-btn2").css({
+                      left: _posiLeft + "px",
+                      top: _posiTop + "px"
+                    });
+                  });
+                  // 最初运行函数
+                  $(window).resize();
+                });
+              } else {
+                //这里执行的是移动端的代码；
+                $(function () {
+                  $("#imgshadow img").click(function () {
+                    $(this).css("display", "none");
+                    $("#videoBox")
+                      .fadeIn()
+                      .css("z-index", "100");
+                    $(".videoTag")[0].play();
+                  });
+                });
+              }
+            });
+          </script>
+          <div class="staff-story-right">
+            <img class="staff-story-three" src="images/jpg/staff-story-3.png" alt="" />
+            <img class="staff-story-four" src="images/jpg/staff-story-4.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="staff-container-h5">
+        <!-- 社团轮播 -->
+        <div class="MainTitle">
+          <h3 class="h3">社团文化</h3>
+          <h4 class="h4"></h4>
+        </div>
+        <ul id="main-society"></ul>
+
+        <script type="text/javascript" src="js/queue.js"></script>
+        <script type="text/javascript" src="js/iSlider.min.js"></script>
+        <script type="text/javascript" src="js/iSlider.animate.min.js"></script>
+        <script>
+          var DATA = [];
+          var DATAName = [
+            "卖唱社",
+            "戏精社",
+            "户外社",
+            "Python社",
+            "羽毛球社",
+            "咖啡社",
+            "篮球社",
+            "麻将社"
+          ];
+
+          var q = new queue();
+          for (var i = 1; i < 7; i++) {
+            DATA.push({
+              content: `<div class="img-container">
+                          <img src="./images/jpg/society${i}.png" alt="">
+                          <div class="img-name-container">
+                            <div>${DATAName[i]}</div>
+                          </div>
+                      </div>`
+            });
+          }
+          init1();
+
+          function clickInfo() {
+            var showText = document;
+          }
+
+          function init1() {
+            var mElSociety = document.getElementById("main-society");
+            var anims = iSlider._animateFuncs;
+            var iElSociety, iElSocietyWrapper;
+            var iElSocietyWrapper = document.createElement("li");
+            var iElName = document.createElement("div");
+
+            iElSociety = document.createElement("div");
+            iElSociety.className = "iElSociety";
+
+            mElSociety.appendChild(iElSocietyWrapper);
+            iElSocietyWrapper.appendChild(iElSociety);
+            new iSlider(iElSociety, DATA, {
+              animateType: "depth",
+              isLooping: 1,
+              isOverspread: 1,
+              isAutoplay: 0,
+              animateTime: 2000,
+              duration: 2000
+            });
+          }
+        </script>
+        <!-- 部门轮播 -->
+        <div class="MainTitle">
+          <h3 class="h3">员工风采</h3>
+          <h4 class="h4"></h4>
+        </div>
+        <ul id="main-department"></ul>
+        <script>
+          var DATA1 = [];
+          var q = new queue();
+          for (var i = 1; i < 12; i++) {
+            DATA1.push({
+              content: `<div class="img-container">
+                          <img src="./images/jpg/department${i}.png" alt="">
+                      </div>`
+            });
+          }
+          init2();
+
+          function init2() {
+            var mElSociety = document.getElementById("main-department");
+            var anims = iSlider._animateFuncs;
+            var iElSociety, iElSocietyWrapper;
+            var iElSocietyWrapper = document.createElement("li");
+            var iElName = document.createElement("div");
+
+            iElSociety = document.createElement("div");
+            iElSociety.className = "iElSociety";
+
+            mElSociety.appendChild(iElSocietyWrapper);
+            iElSocietyWrapper.appendChild(iElSociety);
+            new iSlider(iElSociety, DATA1, {
+              animateType: "depth",
+              isLooping: 1,
+              isOverspread: 1,
+              isAutoplay: 0,
+              animateTime: 2000,
+              duration: 2000
+            });
+          }
+        </script>
+        <!-- 员工故事 -->
+        <div class="MainTitle">
+          <h3 class="h3">员工故事</h3>
+          <h4 class="h4"></h4>
+        </div>
+        <div class="staff-story-h5-container">
+          <div class="staff-story-h5-left">
+            <img class="staff-story-h51" src="images/jpg/staff-story-h51.png" alt="" />
+            <img class="staff-story-h52" src="images/jpg/staff-story-h52.png" alt="" />
+          </div>
+          <div class="staff-story-h5-right">
+            <div id="videoBox3">
+              <video muted src="http://market-source.oss-cn-hangzhou.aliyuncs.com/nianhui/changtou-about2.mp4" controls class="videoTag3"></video>
+            </div>
+            <div id="imgshadow3">
+              <img src="images/jpg/videoimg22.png" alt="" />
+            </div>
+            <script>
+              /**
+               * 视频播放
+               **/
+              $(function () {
+                $("#imgshadow3 img").click(function () {
+                  $(this).css("display", "none");
+                  $("#videoBox3")
+                    .fadeIn()
+                    .css("z-index", "100");
+                  $(".videoTag3")[0].play();
+                });
+              });
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--网页主体部分-->
+  <div class="fastnav">
+    <ul>
+      <li>
+        <a class="libox" href="news.html">
+          <h3>公司动态</h3>
+          <p>长投学堂深耕理财教育领域8年，未来，我们一起创造。</p>
+          <span>查看公司动态&nbsp;&gt;</span>
+        </a>
+      </li>
+
+      <li>
+        <a class="libox" href="course.html#tab1">
+          <h3>课程中心</h3>
+          <p>
+            长投学堂借助大数据等技术不断优化服务，推出并迭代了一系列定制化课程。
+          </p>
+          <span>查看课程中心&nbsp;&gt;</span>
+        </a>
+      </li>
+
+      <li>
+        <a class="libox" href="job.html">
+          <h3>人才招聘</h3>
+          <p>我们正在寻找才华横溢、怀揣梦想的小伙伴，赶快加入我们吧。</p>
+          <span>查看人才招聘&nbsp;&gt;</span>
+        </a>
+      </li>
+    </ul>
+    <div class="clear"></div>
+  </div>
+  <!--底部-->
+  <footer class="footer">
+    <div class="container">
+      © All Rights Reserved 上海昌投网络科技有限公司 |
+      <a class="ahref" href="http://www.miitbeian.gov.cn">沪ICP备13007095号</a> |
+      <a class="ahref" href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31011502008402">沪公网安备 31011502008402号</a> <br />
+      <br />
+      公司地址：上海市浦东新区龙东大道3000号10号楼弘源科创大厦6F&nbsp;&nbsp;&nbsp;&nbsp;客服电话：021-58953739
+    </div>
+  </footer>
+  <!--/底部-->
+</body>
+
+</html>

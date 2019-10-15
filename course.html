@@ -1,0 +1,581 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>课程中心</title>
+  <!-- 项目初始化样式 -->
+  <link rel="icon" href="images/changtou.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="images/changtou.ico" type="image/x-icon" />
+  <link rel="stylesheet" type="text/css" href="css/whir_css.css">
+  <script src="js/jquery-1.11.1.min.js"></script>
+  <!-- <script src="js/jquery.bxslider.js"></script> -->
+
+
+  <!-- HTML5 shim 和 Respond.js用于IE8支持HTML5标签和媒介查询  -->
+  <!--[if lt IE 9]>
+<script src="js/html5shiv3.7.3.min.js"></script>
+<script src="js/respondv1.4.2.min.js"></script>
+<![endif]-->
+  <!-- <script>
+//判断访问设备，方便后面针对不同设备调用代码
+var dev = "";
+if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+    //设备为移动端
+    dev = "mobile";
+    $("html").addClass("mobile");
+}
+else {
+    //设备为pc
+    dev = "pc";
+    $("html").addClass("pc");
+}
+
+//定义设备宽度和高度
+var dw = $(window).width(),
+    dh = $(window).height();
+    
+//console.log("当前使用设备为：" + dev + "||设备宽度为：" + dw + "||设备高度为：" + dh);
+</script> -->
+
+  <link rel="stylesheet" type="text/css" href="css/slick.css">
+  <script src="js/slick.js"></script>
+  <script>
+    //定义栏目ID
+    var navID = 3,
+      menuID = 0;
+  </script>
+</head>
+
+<body class="courbody">
+  <!--头部-->
+  <header class="header wheader">
+    <div class="headerBox ">
+      <div class="TopLeft"> <a class="logo" href='index.html'></a> <a href="javascript:;" class="navBtn"> <span class="span1"></span>
+          <span class="span2"></span> <span class="span3"></span> </a>
+        <div class="clear"></div>
+      </div>
+      <!--导航-->
+      <div class="mainnav">
+        <ul class="ul clearfix">
+          <li id="nav1"><a class="navA" href='index.html'><span>首页</span><em></em></a></li>
+          <li id="nav2" class="xiala"><a class="navA" href='about.html#tab1'><span>关于我们</span><em></em></a>
+            <div class="xl">
+              <dl class="dl">
+                <dd><a class="xla" href="about.html#tab1">长投介绍</a></dd>
+                <dd><a class="xla" href="about.html#tab2">员工风采</a></dd>
+              </dl>
+            </div>
+          </li>
+          <li id="nav3" class="xiala"><a class="navA" href='#tab1'><span>课程中心</span><em></em></a>
+            <div class="xl">
+              <dl class="dl">
+                <dd><a class="xla" href="#tab1">理财通识课</a></dd>
+                <dd><a class="xla" href="#tab2">理财入门课</a></dd>
+                <dd><a class="xla" href="#tab3">主流投资课</a></dd>
+                <dd><a class="xla" href="#tab4">人群定制类课程</a></dd>
+              </dl>
+            </div>
+          </li>
+          <li id="nav4"> <a class="navA" href='job.html'><span>人才招聘</span><em></em></a></li>
+        </ul>
+        <div class="clear"></div>
+      </div>
+      <!--/导航-->
+      <div class="clear"></div>
+    </div>
+  </header>
+  <script>
+    //手机版导航
+    $('.header .navBtn').click(function () {
+      $(this).toggleClass('navBtnon');
+      $('.header .mainnav').stop(true).slideToggle();
+    });
+    //下拉导航
+    $('.mainnav .ul li .navA').click(function (e) {
+      var _this = $(this).parents('li')
+
+      if ($(window).width() < 1000) {
+        if (_this.find('dd').size() > 0) {
+          _this.find('.xl').stop(true).slideToggle();
+          _this.siblings('li').find('.xl').slideUp();
+          return false;
+        }
+      }
+    });
+    var tab = null;
+    if (window.location.href.indexOf('about') > -1) {
+      tab = 2
+    } else {
+      tab = 3
+    }
+    console.log(tab)
+    $("#nav" + tab).addClass('on');
+  </script>
+  <!--/头部-->
+
+  <!--banner-->
+  <aside class="Banner courban">
+    <div class="container">
+      <div class="fl">
+        <h3>理财就是理生活</h3>
+        <p>长投学堂致力于为广大小白理财用户提供个性化、定制化的课程辅导，运用温暖亲切的社群模式，指导用户付诸实践，我们希望让更多的人开始理财，改变生活现状。</p>
+      </div>
+      <img src="images/bannercour.png" alt="">
+    </div>
+  </aside>
+  <!--/banner-->
+
+  <!--网页主体部分-->
+  <section class="Mian">
+    <div class="container">
+      <div class="MianCon">
+        <!--评级-->
+        <div class="Course">
+          <!--标签切换-->
+          <div class="CourseNav" id="switchnav">
+            <div class="swiper-wrapper">
+              <div id="m01" class="swiper-slide"><span><a href="javascript:;"><em class="nav1"></em>理财通识课</a></span></div>
+              <div id="m02" class="swiper-slide"><span><a href="javascript:;"><em class="nav2"></em>理财入门课</a></span></div>
+              <div id="m03" class="swiper-slide"><span><a href="javascript:;"><em class="nav3"></em>主流投资课</a></span></div>
+              <div id="m04" class="swiper-slide"><span><a href="javascript:;"><em class="nav4"></em>人群定制类课程</a></span></div>
+              <div class="clear"></div>
+            </div>
+          </div>
+          <script type="text/javascript">
+            $(function shua() {
+              var hash = window.location.hash || '';
+              if (hash == '#tab1') {
+                $(".CourseNav #m01").addClass("on").siblings().removeClass("on");
+
+                $('.Course .ItemBox .item').hide();
+                $('.Course .ItemBox .item').eq(0).show();
+
+              }
+              if (hash == '#tab2') {
+                $(".CourseNav #m02").addClass("on").siblings().removeClass("on");
+
+                $('.Course .ItemBox .item').hide();
+                $('.Course .ItemBox .item').eq(1).show();
+
+
+              }
+              if (hash == '#tab3') {
+                $(".CourseNav #m03").addClass("on").siblings().removeClass("on");
+
+                $('.Course .ItemBox .item').hide();
+                $('.Course .ItemBox .item').eq(2).show();
+
+              } else if (hash == '#tab4') {
+                $(".CourseNav #m04").addClass("on").siblings().removeClass("on");
+
+                $('.Course .ItemBox .item').hide();
+                $('.Course .ItemBox .item').eq(3).show();
+
+              };
+              window.onload = shua;
+              $(document).ready(function () {
+                $('.mainnav a').click(function () {
+                  setTimeout(shua, 10)
+                })
+              })
+            });
+
+            $('.CourseNav a').click(function () {
+              var _this = $(this).parents('.swiper-slide');
+              _this.addClass('on').siblings('.swiper-slide').removeClass('on');
+              $('.Course .ItemBox .item').eq(_this.index()).fadeIn().siblings('.item').hide();
+            })
+          </script>
+
+          <!--切换内容-->
+          <div class="ItemBox" id="switchpage">
+            <div class="swiper-wrapper">
+              <!--内容1-->
+              <div class="item item01 swiper-slide" id="c01">
+                <div class="itemCon">
+                  <div class="List">
+                    <ul class="ul">
+                      <li>
+                        <div class="imgb"><img src="images/dian1.png" alt=""><span>综合难度</span></div>
+                        <div class="star"><span class="staron"><img src="images/Star-on.png" /><img src="images/Star-on.png" /></span><span
+                            class="stargray"><img src="images/Star.png" /><img src="images/Star.png" /><img src="images/Star.png" /></span></div>
+                      </li>
+                      <li>
+                        <div class="imgb"><img src="images/dian2.png" alt=""><span>理论知识</span></div>
+                        <div class="star"><span class="staron"><img src="images/Star-on.png" /><img src="images/Star-on.png" /><img
+                              src="images/Star-on.png" /><img src="images/Star-on.png" /></span><span class="stargray"><img
+                              src="images/Star.png" /></span></div>
+                      </li>
+                      <li>
+                        <div class="imgb"><img src="images/dian3.png" alt=""><span>实战操作</span></div>
+                        <div class="star"><span class="staron"><img src="images/Star-on.png" /></span><span class="stargray"><img
+                              src="images/Star.png" /><img src="images/Star.png" /><img src="images/Star.png" /><img
+                              src="images/Star.png" /></span></div>
+                      </li>
+                      <li class="last">
+                        <div class="imgb"><img src="images/dian4.png" alt=""><span>社交互动</span></div>
+                        <div class="star"><span class="staron"><img src="images/Star-on.png" /></span><span class="stargray"><img
+                              src="images/Star.png" /><img src="images/Star.png" /><img src="images/Star.png" /><img
+                              src="images/Star.png" /></span></div>
+                      </li>
+                      <div class="clear"></div>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!--/内容1-->
+
+              <!--内容2-->
+              <div class="item item02 swiper-slide" id="c02">
+                <div class="itemCon">
+                  <div class="List">
+                    <ul class="ul">
+                      <li>
+                        <div class="imgb"><img src="images/dian1.png" alt=""><span>综合难度</span></div>
+                        <div class="star"><span class="staron"><img src="images/Star-on.png" /><img src="images/Star-on.png" /></span><span
+                            class="stargray"><img src="images/Star.png" /><img src="images/Star.png" /><img src="images/Star.png" /></span></div>
+                      </li>
+                      <li>
+                        <div class="imgb"><img src="images/dian2.png" alt=""><span>理论知识</span></div>
+                        <div class="star"><span class="staron"><img src="images/Star-on.png" /><img src="images/Star-on.png" /><img
+                              src="images/Star-on.png" /></span><span class="stargray"><img src="images/Star.png" /><img
+                              src="images/Star.png" /></span></div>
+                      </li>
+                      <li>
+                        <div class="imgb"><img src="images/dian3.png" alt=""><span>实战操作</span></div>
+                        <div class="star"><span class="staron"><img src="images/Star-on.png" /><img src="images/Star-on.png" /><img
+                              src="images/Star-on.png" /></span><span class="stargray"><img src="images/Star.png" /><img
+                              src="images/Star.png" /></span></div>
+                      </li>
+                      <li class="last">
+                        <div class="imgb"><img src="images/dian4.png" alt=""><span>社交互动</span></div>
+                        <div class="star"><span class="staron"><img src="images/Star-on.png" /><img src="images/Star-on.png" /><img
+                              src="images/Star-on.png" /><img src="images/Star-on.png" /><img src="images/Star-on.png" /></span></div>
+                      </li>
+                      <div class="clear"></div>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!--/内容2-->
+
+              <!--内容3-->
+              <div class="item item03 swiper-slide" id="c03">
+                <div class="itemCon">
+                  <div class="List">
+                    <ul class="ul">
+                      <li>
+                        <div class="imgb"><img src="images/dian1.png" alt=""><span>综合难度</span></div>
+                        <div class="star"><span class="staron"><img src="images/Star-on.png" /><img src="images/Star-on.png" /><img
+                              src="images/Star-on.png" /><img src="images/Star-on.png" /></span><span class="stargray"><img
+                              src="images/Star.png" /></span></div>
+                      </li>
+                      <li>
+                        <div class="imgb"><img src="images/dian2.png" alt=""><span>理论知识</span></div>
+                        <div class="star"><span class="staron"><img src="images/Star-on.png" /><img src="images/Star-on.png" /><img
+                              src="images/Star-on.png" /></span><span class="stargray"><img src="images/Star.png" /><img
+                              src="images/Star.png" /></span></div>
+                      </li>
+                      <li>
+                        <div class="imgb"><img src="images/dian3.png" alt=""><span>实战操作</span></div>
+                        <div class="star"><span class="staron"><img src="images/Star-on.png" /><img src="images/Star-on.png" /><img
+                              src="images/Star-on.png" /><img src="images/Star-on.png" /></span><span class="stargray"><img
+                              src="images/Star.png" /></span></div>
+                      </li>
+                      <li class="last">
+                        <div class="imgb"><img src="images/dian4.png" alt=""><span>社交互动</span></div>
+                        <div class="star"><span class="staron"><img src="images/Star-on.png" /><img src="images/Star-on.png" /><img
+                              src="images/Star-on.png" /><img src="images/Star-on.png" /><img src="images/Star-on.png" /></span></div>
+                      </li>
+                      <div class="clear"></div>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!--/内容3-->
+
+              <!--内容4-->
+              <div class="item item04 swiper-slide" id="c04">
+                <div class="itemCon">
+                  <div class="List">
+                    <ul class="ul">
+                      <li>
+                        <div class="imgb"><img src="images/dian1.png" alt=""><span>综合难度</span></div>
+                        <div class="star"><span class="staron"><img src="images/Star-on.png" /><img src="images/Star-on.png" /><img
+                              src="images/Star-on.png" /></span><span class="stargray"><img src="images/Star.png" /><img
+                              src="images/Star.png" /></span></div>
+                      </li>
+                      <li>
+                        <div class="imgb"><img src="images/dian2.png" alt=""><span>理论知识</span></div>
+                        <div class="star"><span class="staron"><img src="images/Star-on.png" /><img src="images/Star-on.png" /><img
+                              src="images/Star-on.png" /></span><span class="stargray"><img src="images/Star.png" /><img
+                              src="images/Star.png" /></span></div>
+                      </li>
+                      <li>
+                        <div class="imgb"><img src="images/dian3.png" alt=""><span>实战操作</span></div>
+                        <div class="star"><span class="staron"><img src="images/Star-on.png" /><img src="images/Star-on.png" /></span><span
+                            class="stargray"><img src="images/Star.png" /><img src="images/Star.png" /><img src="images/Star.png" /></span></div>
+                      </li>
+                      <li class="last">
+                        <div class="imgb"><img src="images/dian4.png" alt=""><span>社交互动</span></div>
+                        <div class="star"><span class="staron"><img src="images/Star-on.png" /><img src="images/Star-on.png" /></span><span
+                            class="stargray"><img src="images/Star.png" /><img src="images/Star.png" /><img src="images/Star.png" /></span></div>
+                      </li>
+                      <div class="clear"></div>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!--/内容4-->
+            </div>
+          </div>
+
+          <!--切换内容-->
+        </div>
+        <!--/评级-->
+      </div>
+    </div>
+
+    <div class="clear"></div>
+    <!--内容-->
+    <div class="CourCon">
+      <div class="container">
+        <ul>
+          <li>
+            <div class="imgbox imgbox1"></div>
+            <div class="txtbox">
+              <h3>理财通识课</h3>
+              <p>分为经典书籍拆读和口袋学堂。经典书籍拆读，拆分了100本经典投资理财书籍，利用音频的形式将高深晦涩的内容拆读为有趣有料的身边故事。口袋学堂是针对理财小白的微课程，使用深入浅出的语言，利用5-10分钟让你了解一个理财小知识。理财通识课冲破空间的限制，陪伴你在每个想学习的角落，引领大家走进理财大师的世界。</p>
+            </div>
+          </li>
+
+          <li>
+            <div class="imgbox imgbox2"></div>
+            <div class="txtbox">
+              <h3>理财入门课</h3>
+              <p>专为零基础小白理财学习者设计的14天小白理财训练营，经过了3年时间的打磨检验。训练营的课程以图文音频的形式让理财知识变得轻松易懂，内容涵盖理财理念、资产配置、保险，基金、股票基础入门，全程安排班主任监督你的学习，治疗你的拖延症，带领你在14天里发生全新的理财理念的改变。如果你想开始学习理财，开始更好的的生活，那我们可以有信心的告诉你，14天小白理财训练营是你更好的理财入门学习处。</p>
+            </div>
+          </li>
+
+          <li>
+            <div class="imgbox imgbox3"></div>
+            <div class="txtbox">
+              <h3>主流投资大课</h3>
+              <p>分为基金、股票、保险三大类课程，内容系统全面，语言生动有趣，利用丰富的案例和故事进行讲解，把深奥的理财知识变的易学易懂。由小熊老师带领权威讲师，利用训练营模式开展学习，每天平均学习时间为30分钟-1小时，市面上那么多的理财学习产品只会让你从不知道到知道，但在长投学堂的主线大课，我们会带着你发生从不会做到会做的改变。</p>
+            </div>
+          </li>
+
+          <li>
+            <div class="imgbox imgbox4"></div>
+            <div class="txtbox">
+              <h3>人群定制类课程</h3>
+              <p>与知识付费平台合作定制课程，目前已有的课程为与支付宝合作的《育儿财商课：树立孩子正确金钱观》、《巧用五险一金》，与喜马拉雅平台合作的《女性理财课》，与唯库合作的《人人有用的零基础理财入门课》，分别针对儿童、女性以及零基础的小白进行课程定制。</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--/内容-->
+
+    <!--模式-->
+    <div class="CourMod">
+      <div class="container">
+        <div class="MainTitle">
+          <h3 class="h3">训练营模式</h3>
+          <h4 class="h4"></h4>
+        </div>
+
+        <!--模式一-->
+        <div class="item item01">
+          <h3>你将会经历</h3>
+          <div class="img"></div>
+          <ul>
+            <li><span>加入群聊</span></li>
+            <li><span>开营上课</span></li>
+            <li><span>14天训练营</span></li>
+            <li><span>毕业典礼</span></li>
+          </ul>
+        </div>
+        <!--/模式一-->
+
+        <!--模式二-->
+        <div class="item item02">
+          <h3>你每天需要参与</h3>
+          <ul>
+            <li>
+              <div class="img"><img src="images/jingli1.png" /></div>
+              <div class="txt"><span class="tit">课程音频</span><span class="zd">知识、操作、案例<br />15～20min</span></div>
+            </li>
+            <li>
+              <div class="img"><img src="images/jingli2.png" /></div>
+              <div class="txt"><span class="tit">社群晚课</span><span class="zd">分享、实操、活动<br />约30min</span></div>
+            </li>
+            <li>
+              <div class="img"><img src="images/jingli3.png" /></div>
+              <div class="txt"><span class="tit">每日一问</span><span class="zd">班班逐条批改<br />约5min</span></div>
+            </li>
+          </ul>
+        </div>
+        <!--/模式二-->
+
+        <!--模式三-->
+        <div class="item item03">
+          <h3>训练营还有</h3>
+          <ul>
+            <li>
+              <div class="img"><img src="images/jingli4.png" /></div>
+              <div class="txt"><span class="tit">现场答辩</span><span class="zd">班班在线加餐</span></div>
+            </li>
+            <li>
+              <div class="img"><img src="images/jingli5.png" /></div>
+              <div class="txt"><span class="tit">终极考核</span><span class="zd">考试，批改，毕业</span></div>
+            </li>
+          </ul>
+        </div>
+        <!--/模式二-->
+      </div>
+    </div>
+    <!--/模式-->
+
+
+    <!--名师简介-->
+    <!-- <div class="MSjian">
+      <div class="container">
+        <div class="MainTitle">
+          <h3 class="h3">名师简介</h3>
+          <h4 class="h4"></h4>
+        </div> -->
+        <!--切换-->
+        <!-- <div class="MSjiancon"> -->
+          <!--内容-->
+          <!-- <div class="List slider"> -->
+            <!-- 一个盒子 -->
+
+            <!-- <div class="itemList">
+              <div class="libox">
+                <div class="liwap">
+                  <div class="img"><img src="images/xiaoxiong.png" /></div>
+                  <div class="title">
+                    <h3>小熊老师</h3>
+                    <span>长投学堂创始人 | 资深价值投资者</span>
+                  </div>
+                  <div class="TxtBox">
+                    <p>超过12年投资经验<br />
+                      投资足迹遍布美股、港股、A股<br />
+                      平均年化收益率35.6%<br />
+                      通过投资实现财富自由，并创建长投学堂旨在惠及更多人</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="itemList">
+              <div class="libox">
+                <div class="liwap">
+                  <div class="img"><img src="images/shuimei.png" /></div>
+                  <div class="title">
+                    <h3>水湄物语</h3>
+                    <span>长投学堂联合创始人 | 知名理财大V</span>
+                  </div>
+                  <div class="TxtBox">
+                    <p>豆瓣14w+粉丝理财红人<br />
+                      畅销书《30岁前的每一天》作者<br />
+                      女性理财第一人<br />
+                      知乎、在行等多平台理财大V</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="itemList">
+              <div class="libox">
+                <div class="liwap">
+                  <div class="img"><img src="images/lip.png" /></div>
+                  <div class="title">
+                    <h3>Lip师兄</h3>
+                    <span>90后股票分析师</span>
+                  </div>
+                  <div class="TxtBox">
+                    <p>从0赚取100万投资收益<br />
+                      一个看10遍《灌篮高手》的90后<br />
+                      擅长用逗比、有趣的段子讲投资<br />
+                      畅销书《给投资新手的极简股票课》作者<br />
+                      学投资的第2年，斩获A股收益率105%、港股收益率40%<br />
+                      独创基金投资策略，斩获年30%+收益率<br />
+                      人称“牛股路由器”</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="itemList">
+              <div class="libox">
+                <div class="liwap">
+                  <div class="img"><img src="images/baihe.png" /></div>
+                  <div class="title">
+                    <h3>百合学姐</h3>
+                    <span>14天小白理财训练营创始人</span>
+                  </div>
+                  <div class="TxtBox">
+                    <p>带领200w+小伙伴开启财富自由之路<br />
+                      喜马拉雅《一听就能用的理财课》主播，44万+收听量<br />
+                      畅销书《第一次买基金就稳赚》作者<br />
+                      心理学+教育学硕士</p>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
+
+            <!-- 一个盒子 -->
+
+          <!-- </div> -->
+          <!--/内容-->
+        <!-- </div> -->
+        <!-- <script>
+          $('.MSjiancon .slider').slick({
+            slidesToShow: 3,
+            autoplay: true,
+            slidesToScroll: 1,
+            prevArrow: '<a href="javascript:;" class="slick-prev  slickBtn" aria-label="Previous">Prev</a>',
+            nextArrow: '<a href="javascript:;" class="slick-next  slickBtn" aria-label="Next">Next</a>',
+            dots: false,
+            customPaging: function (slider, i) {
+              return $('<span>' + (i + 1) + '</span>');
+            },
+            responsive: [{
+              breakpoint: 769,
+              settings: {
+                slidesToShow: 1
+              }
+            }]
+          })
+        </script> -->
+        <!--/切换-->
+      <!-- </div>
+    </div> -->
+    <!--/名师简介-->
+
+  </section>
+  <!--网页主体部分-->
+
+  <div class="clear"></div>
+
+  <!--底部-->
+  <footer class="footer">
+    <div class="container">
+      © All Rights Reserved 上海昌投网络科技有限公司 |
+      <a class="ahref" href="http://www.miitbeian.gov.cn">沪ICP备13007095号</a> |
+      <a class="ahref" href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31011502008402">沪公网安备 31011502008402号</a> <br />
+      <br />
+      公司地址：上海市浦东新区龙东大道3000号10号楼弘源科创大厦6F&nbsp;&nbsp;&nbsp;&nbsp;客服电话：021-58953739
+    </div>
+  </footer>
+  <!--/底部-->
+</body>
+
+</html>

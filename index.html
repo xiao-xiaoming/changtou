@@ -1,0 +1,480 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="Keywords" content="长投学堂,长投网,理财教育,理财">
+  <meta name="description" content="国内首个推出定制化课程的在线理财教育机构，已有超200万人加入长投学堂，9元小白理财训练营等你加入！">
+  <title>长投学堂 ▏长投网_理财教育_昌投</title>
+  <style>.myscroll {
+      width: 100%;
+      height: 300px;
+      margin: 0 auto;
+      line-height: 26px;
+      font-size: 12px;
+      overflow: hidden;
+    }
+  </style>
+  <!-- 项目初始化样式 -->
+  <link rel="icon" href="images/changtou.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="images/changtou.ico" type="image/x-icon" />
+  <link rel="stylesheet" type="text/css" href="css/whir_css.css">
+  <script src="js/jquery-1.11.1.min.js"></script>
+  <script src="js/jquery.bxslider.js"></script>
+  <script src="js/scroll.js"></script>
+  <script src="js/sensorsdata.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      window.sensorsdata.track('pageView', {
+        pageTitle: '长投学堂官网',
+        pageUrl: window.location.href,
+        moduleTitle: '官网',
+        platform: 'H5',
+        project: '长投学堂官网',
+        version: 'V-1.0.0',
+        campaignID: -1,
+        distributionID: 741,
+        projectID: 4,
+        taskID: -1
+      });
+    });
+  </script>
+  <!-- HTML5 shim 和 Respond.js用于IE8支持HTML5标签和媒介查询  -->
+  <!--[if lt IE 9]>
+<script src="js/html5shiv3.7.3.min.js"></script>
+<script src="js/respondv1.4.2.min.js"></script>
+<![endif]-->
+  <!-- <script>
+//判断访问设备，方便后面针对不同设备调用代码
+var dev = "";
+if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+    //设备为移动端
+    dev = "mobile";
+    $("html").addClass("mobile");
+}
+else {
+    //设备为pc
+    dev = "pc";
+    $("html").addClass("pc");
+}
+
+//定义设备宽度和高度
+var dw = $(window).width(),
+    dh = $(window).height();
+    
+//console.log("当前使用设备为：" + dev + "||设备宽度为：" + dw + "||设备高度为：" + dh);
+</script> -->
+  <script src="js/base.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/slick.css">
+  <script src="js/slick.js"></script>
+  <script>
+    //定义栏目ID
+    var navID = 1,
+      menuID = 0;
+  </script>
+</head>
+
+<body class="sybody">
+  <!--头部-->
+  <header class="header">
+    <div class="headerBox ">
+      <!--logo-->
+      <div class="TopLeft"> <a class="logo" href='index.html'></a> <a href="javascript:;" class="navBtn"> <span class="span1"></span>
+          <span class="span2"></span> <span class="span3"></span> </a>
+        <div class="clear"></div>
+      </div>
+      <!--/logo-->
+
+      <!--导航-->
+      <div class="mainnav">
+        <ul class="ul clearfix">
+          <li id="nav1"><a class="navA" href='index.html'><span>首页</span><em></em></a></li>
+          <li id="nav2" class="xiala"><a class="navA" href='about.html#tab1'><span>关于我们</span><em></em></a>
+            <div class="xl">
+              <dl class="dl">
+                <dd><a class="xla" href="about.html#tab1">长投介绍</a></dd>
+                <dd><a class="xla" href="about.html#tab2">员工风采</a></dd>
+              </dl>
+            </div>
+          </li>
+          <li id="nav3" class="xiala"><a class="navA" href='course.html#tab1'><span>课程中心</span><em></em></a>
+            <div class="xl">
+              <dl class="dl">
+                <dd><a class="xla" href="course.html#tab1">理财通识课</a></dd>
+                <dd><a class="xla" href="course.html#tab2">理财入门课</a></dd>
+                <dd><a class="xla" href="course.html#tab3">主流投资课</a></dd>
+                <dd><a class="xla" href="course.html#tab4">人群定制类课程</a></dd>
+              </dl>
+            </div>
+          </li>
+          <li id="nav4"> <a class="navA" href='job.html'><span>人才招聘</span><em></em></a></li>
+        </ul>
+        <div class="clear"></div>
+      </div>
+      <!--/导航-->
+      <div class="clear"></div>
+    </div>
+  </header>
+  <script>
+    //手机版导航
+    $('.header .navBtn').click(function () {
+      $(this).toggleClass('navBtnon');
+      $('.header .mainnav').stop(true).slideToggle();
+    });
+    //下拉导航
+    $('.mainnav .ul li .navA').click(function (e) {
+      var _this = $(this).parents('li')
+
+      if ($(window).width() < 1000) {
+        if (_this.find('dd').size() > 0) {
+          _this.find('.xl').stop(true).slideToggle();
+          _this.siblings('li').find('.xl').slideUp();
+          return false;
+        }
+      }
+    });
+
+    $("#nav" + navID).addClass('on');
+  </script>
+  <!--/头部-->
+
+  <aside class="HomeBan">
+    <!--banner-->
+    <div class="banCon">
+      <div class="bxslider">
+        <ul>
+          <li><img src="http://market-source.oss-cn-hangzhou.aliyuncs.com/keep/BbannerOne.png" />
+            <div class="container">
+              <div class="erweima"><img src="images/qrCode/banner1.PNG.png" /><span>扫一扫，关注长投学堂订阅号</span></div>
+            </div>
+          </li>
+          <li><img src="http://market-source.oss-cn-hangzhou.aliyuncs.com/keep/BbannerTwo.png" />
+            <div class="container">
+              <div class="erweima"><img src="images/qrCode/banner2.PNG.png" /><span>扫一扫，关注小白训练营</span></div>
+            </div>
+          </li>
+          <li>
+            <a href="https://h5.youzan.com/v2/goods/2xhrgrb7l0olq?dc_ps=2304318786985003013.200001&amp;redirect_count=1" target="__blank">
+              <img src="http://market-source.oss-cn-hangzhou.aliyuncs.com/keep/bbannerthree.png" />
+            </a>
+           <!--  <div class="container">
+              <div class="erweima"><img src="images/xiaobai.png" /><span>扫一扫，关注小白训练营</span></div>
+            </div> -->
+          </li>
+        </ul>
+      </div>
+      <div class="bxslider2">
+        <ul>
+          <li><img src="http://market-source.oss-cn-hangzhou.aliyuncs.com/keep/SbannerOne.png" /></li>
+          <li><img src="http://market-source.oss-cn-hangzhou.aliyuncs.com/keep/SbannerTwo.png" /></li>
+        </ul>
+      </div>
+    </div>
+    <script>
+      $(function () {
+        $('.HomeBan .banCon ul').bxSlider({
+          mode: 'fade', //默认的是水平 
+          displaySlideQty: 1, //显示li的个数 
+          moveSlideQty: 1, //移动li的个数  
+          captions: true, //自动控制 
+          auto: true,
+          controls: false //隐藏左右按钮 
+        });
+      });
+    </script>
+    <!--/banner-->
+
+    <!--公告-->
+    <div class="appnews">
+      <div class="ico"></div>
+      <div class="nei">
+        <marquee behavior="scroll" scrollamount="3" loop="-1" direction="left">
+          <span>想了解更多长投课程，关注长投学堂服务号</span>
+          <span>想了解更多长投课程，关注14天小白训练营</span>
+        </marquee>
+      </div>
+      <a class="close"></a>
+    </div>
+    <script>
+      $(document).ready(function (e) {
+        $(".close").click(function (e) {
+          $(".appnews").toggle();
+        });
+      });
+    </script>
+    <div class="clear"></div>
+    <!--/公告-->
+
+    <!--课程体系-->
+    <div class="banTxt">
+      <div class="container">
+        <div class="List">
+          <div class="MainTitle">
+            <h3 class="h3">课程体系</h3>
+            <h4 class="h4"></h4>
+          </div>
+          <ul class="ul">
+            <li> <a href='course.html#tab1' class="libox">
+                <div class="img"><img src="images/tixi1.png" alt=""></div>
+                <span class="txt">理财通识课</span>
+              </a> </li>
+            <li> <a href="course.html#tab2" class="libox">
+                <div class="img"><img src="images/tixi2.png" alt=""></div>
+                <span class="txt">理财入门课</span>
+              </a> </li>
+            <li> <a href="course.html#tab3" class="libox">
+                <div class="img"><img src="images/tixi3.png" alt=""></div>
+                <span class="txt">主流投资课</span>
+              </a> </li>
+            <li> <a href="course.html#tab4" class="libox">
+                <div class="img"><img src="images/tixi4.png" alt=""></div>
+                <span class="txt">人群定制类课程</span>
+              </a> </li>
+            <div class="clear"></div>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--/课程体系-->
+  </aside>
+
+  <!--网页主体部分-->
+  <section class="Mian">
+    <!--优势-->
+    <div class="HomeF HomeF1">
+      <div class="container">
+        <div class="MainTitle">
+          <h3 class="h3">课程优势</h3>
+          <h4 class="h4"></h4>
+        </div>
+        <div class="listBox">
+          <div class="list">
+            <ul class="ul">
+              <li> <a class="libox">
+                  <div class="img"><img src="images/youshi1.png" /></div>
+                  <div class="txtBox">
+                    <h3 class="h3">师友陪伴的社群学习模式</h3>
+                    <div class="p">打造训练营课堂式教学，提供师友扶持的陪伴式社群学习与生活模式</div>
+                  </div>
+                </a> </li>
+              <li> <a class="libox">
+                  <div class="img"><img src="images/youshi2.png" /></div>
+                  <div class="txtBox">
+                    <h3 class="h3">有趣易懂的教学设计</h3>
+                    <div class="p">通过说人话、讲故事、降维度将专业知识拆解为易懂有趣的学习内容和授课方式</div>
+                  </div>
+                </a> </li>
+              <li> <a class="libox">
+                  <div class="img"><img src="images/youshi3.png" /></div>
+                  <div class="txtBox">
+                    <h3 class="h3">全面系统的课程体系</h3>
+                    <div class="p">所覆盖的投资领域更全面，涵盖基金、股票、保险、海外投资等</div>
+                  </div>
+                </a> </li>
+              <div class="clear"></div>
+            </ul>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      $('.HomeF1 .list li:last').addClass('last');
+    </script>
+    <!--/优势-->
+
+    <!--视频-->
+    <div class="videodiv">
+      <div class="container">
+        <div class="font"></div>
+        <div class="vBox">
+          <div class="video"><img src="images/videoimg.jpg" id="video" /></div>
+          <video src="http://market-source.oss-cn-hangzhou.aliyuncs.com/nianhui/changtou-financing.mp4" controls class="mobvid"></video>
+        </div>
+        <!--弹出框-->
+        <div class="video-btn" id="video-btn">
+          <a class="video-shut" id="video-shut"><img src="images/closeico2.png" /></a>
+          <div class="video-area" id="video-area"></div>
+        </div>
+        <!--/弹出框-->
+      </div>
+    </div>
+
+    <div id="shadow"></div>
+    <script>
+      function IsPC() {
+        var userAgentInfo = navigator.userAgent;
+        var Agents = ["Android", "iPhone",
+          "SymbianOS", "Windows Phone",
+          "iPad", "iPod"
+        ];
+        var flag = true;
+        for (var v = 0; v < Agents.length; v++) {
+          if (userAgentInfo.indexOf(Agents[v]) > 0) {
+            flag = false;
+            break;
+          }
+        }
+        return flag;
+      };
+      $(document).ready(function () {
+        var isPC = IsPC();
+        if (isPC) {
+
+          //这里执行的是PC端的代码；
+          //点击出现弹出框
+          var obtn = document.getElementById('video');
+          var ovideo = document.getElementById('video-btn');
+          var oatn = document.getElementById('video-area');
+          var oshut = document.getElementById('video-shut');
+          var oshadow = document.getElementById('shadow');
+          obtn.onclick = function () {
+            ovideo.style.display = 'block';
+            oshadow.style.display = 'block';
+            oatn.innerHTML =
+              '<video src="http://market-source.oss-cn-hangzhou.aliyuncs.com/nianhui/changtou-financing.mp4" controls="controls" autoplay="autoplay" width="100%" height="100%"></video>';
+          }
+          oshut.onclick = function () {
+            ovideo.style.display = 'none';
+            oshadow.style.display = 'none';
+          }
+          //居中展示
+          $(document).ready(function () {
+            $(window).resize(function () {
+              $('.video-btn').css({
+                position: 'absolute',
+                left: ($('.videodiv').width() - $('.video-btn').outerWidth()) / 2,
+                top: ($('.videodiv').height() - $('.video-btn').outerHeight()) / 2
+              });
+            });
+            // 最初运行函数
+            $(window).resize();
+          });
+
+
+        } else {
+
+          //这里执行的是移动端的代码；
+          $('.vBox').click(function () {
+            $(this).find('video')[0].play();
+            $(this).find('video').addClass('videoon')
+          })
+
+
+        }
+      });
+    </script>
+    <!--/视频-->
+
+    <!--公司动态-->
+    <div class="HomeF HomeF2">
+      <div class="container">
+        <div class="MainTitle">
+          <h3 class="h3">公司动态</h3>
+          <h4 class="h4"></h4>
+          <a href='news.html' class="more">所有文章</a>
+        </div>
+        <div class="list">
+          <ul class="ul">
+
+            <li class="libox">
+              <div class="imgbox">
+                <div class="img"> <img src="images/news1.png" alt=""> </div>
+              </div>
+              <div class="txtbox" onClick="window.open('http://sh.qq.com/a/20181024/011990.htm')">
+                <div class="tit">
+                  <h3 class="h3">历时8年探索理财“轻教育”，长投与用户共话财商教育</h3><a href="http://sh.qq.com/a/20181024/011990.htm" target="_blank">更多&gt;</a>
+                </div>
+                <div class="txt">10月20日至21日，国内在线理财教育机构长投学堂在上海举办了第5届年会。会上，长投学堂的创始团队也首次对外披露，8年多探索出的理财“轻教育”下的社群模式，逐步建立了全国最大理财教育机构的历程。</div>
+              </div>
+            </li>
+
+            <li class="libox">
+              <div class="imgbox">
+                <div class="img"> <img src="images/newspic1.png" alt=""> </div>
+              </div>
+              <div class="txtbox" onClick="window.open('http://sh.sina.com.cn/news/economy/2018-09-05/detail-ihitesuy5569553.shtml?qq-pf-to=pcqq.temporaryc2c')">
+                <div class="tit">
+                  <h3 class="h3">长投学堂完成1亿元A轮融资 付费用户已超过200万</h3><a href="http://sh.sina.com.cn/news/economy/2018-09-05/detail-ihitesuy5569553.shtml?qq-pf-to=pcqq.temporaryc2c"
+                    target="_blank">更多&gt;</a>
+                </div>
+                <div class="txt">日前,在线理财教育机构长投学堂宣布完成1亿元人民币A轮融资,刷新了该品类单笔融资记录。据悉,本轮融资由涌铧投资和成为资本联合领投,安可资本担任本轮融资独家财务顾问。<br />长投学堂联合创始人黄艳(笔名水湄物语)表示,本轮融资之后,长投学堂将继续加大课程研发力度,为用户提供更加个性化、定制化的课程辅导,同时也将沿用长投学堂温暖亲切的社群模式,激励用户学完课程,并指导他们付诸实践,以期让更多的人开始理财,改变生活现状。</div>
+              </div>
+            </li>
+
+            <!-- <li class="libox">
+              <div class="imgbox">
+                <div class="img"> <img src="images/newspic2.png" alt=""> </div>
+              </div>
+              <div class="txtbox" onClick="window.open('https://view.inews.qq.com/a/20180830A0H7ZH00?uid=')">
+                <div class="tit">
+                  <h3 class="h3">八年深耕 长投学堂专注打造一站式理财教育平台</h3><a href="https://view.inews.qq.com/a/20180830A0H7ZH00?uid="
+                    target="_blank">更多&gt;</a>
+                </div>
+                <div class="txt">中新网上海新闻8月29日电
+                  (汪青)随着当前国民可支配收入的不断提高，财商已成为与智商、情商并列的现代社会能力三大不可或缺的素质；然而，现实情况是，当前中国城市居民财商平均得分仅为60.1分，刚刚及格。可喜的是，目前，全国有超过200万理财小白，通过在长投学堂上的系统学习，正在或者已经实现着人生蜕变，他们或者实现了自己的买车买房梦，或者实现了自己的环球旅行梦，还有些甚至实现了阶级跃迁。</div>
+              </div>
+            </li> -->
+
+            <div class="clear"></div>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--/公司动态-->
+
+    <!--合作伙伴-->
+    <div class="HomeF HomeF3">
+      <div class="container">
+        <div class="MainTitle">
+          <h3 class="h3">合作伙伴</h3>
+          <h4 class="h4"></h4>
+        </div>
+        <div class="list">
+          <ul class="ul">
+            <li><a><img src="images/link01.png" alt=""></a></li>
+            <li><a><img src="images/link02.png" alt=""></a></li>
+            <li><a><img src="images/link03.png" alt=""></a></li>
+            <li><a><img src="images/qingting.png" alt=""></a></li>
+            <div class="clear"></div>
+          </ul>
+          <ul class="ul">
+            <li><a><img src="images/lizhi.png" alt=""></a></li>
+            <li><a><img src="images/link04.png" alt=""></a></li>
+            <li><a><img src="images/huatai.png" alt=""></a></li>
+            <div class="clear"></div>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--/合作伙伴-->
+
+  </section>
+  <!--网页主体部分-->
+
+  <!--底部-->
+  <footer class="footer">
+    <div class="container">
+      © All Rights Reserved 上海昌投网络科技有限公司 |
+      <a class="ahref" href="http://www.miitbeian.gov.cn">沪ICP备13007095号</a> |
+      <a class="ahref" href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31011502008402">沪公网安备 31011502008402号</a> <br />
+      <br />
+      公司地址：上海市浦东新区龙东大道3000号10号楼弘源科创大厦6F&nbsp;&nbsp;&nbsp;&nbsp;客服电话：021-58953739
+    </div>
+  </footer>
+  <script type="text/javascript">
+    //整站无图处理
+    jQuery.each(jQuery("img"), function (i, n) {
+      jQuery(n).error(function () {
+        // n.src = 'images/nopic.jpg';
+      });
+      n.src = n.src;
+    });
+  </script>
+  <!--/底部-->
+
+</body>
+
+</html>

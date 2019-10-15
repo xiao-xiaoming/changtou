@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>公司动态</title>
+  <!-- 项目初始化样式 -->
+  <link rel="icon" href="images/changtou.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="images/changtou.ico" type="image/x-icon" />
+  <link rel="stylesheet" type="text/css" href="css/whir_css.css" />
+  <script src="js/jquery-1.11.1.min.js"></script>
+  <script src="js/jquery.bxslider.js"></script>
+
+  <!-- HTML5 shim 和 Respond.js用于IE8支持HTML5标签和媒介查询  -->
+  <!--[if lt IE 9]>
+      <script src="js/html5shiv3.7.3.min.js"></script>
+      <script src="js/respondv1.4.2.min.js"></script>
+    <![endif]-->
+  <!-- <script>
+//判断访问设备，方便后面针对不同设备调用代码
+var dev = "";
+if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+    //设备为移动端
+    dev = "mobile";
+    $("html").addClass("mobile");
+}
+else {
+    //设备为pc
+    dev = "pc";
+    $("html").addClass("pc");
+}
+
+//定义设备宽度和高度
+var dw = $(window).width(),
+    dh = $(window).height();
+    
+//console.log("当前使用设备为：" + dev + "||设备宽度为：" + dw + "||设备高度为：" + dh);
+</script> -->
+
+  <script src="js/base.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/slick.css" />
+  <script src="js/slick.js"></script>
+  <script>
+    //定义栏目ID
+    var navID = 3,
+      menuID = 0;
+  </script>
+</head>
+
+<body class="newsbody">
+  <!--头部-->
+  <header class="header wheader">
+    <div class="headerBox ">
+      <div class="TopLeft">
+        <a class="logo" href="index.html"></a>
+        <a href="javascript:;" class="navBtn">
+          <span class="span1"></span> <span class="span2"></span>
+          <span class="span3"></span>
+        </a>
+        <div class="clear"></div>
+      </div>
+      <!--导航-->
+      <div class="mainnav">
+        <ul class="ul clearfix">
+          <li id="nav1">
+            <a class="navA" href="index.html"><span>首页</span><em></em></a>
+          </li>
+          <li id="nav2">
+            <a class="navA" href="about.html#tab1"><span>关于我们</span><em></em></a>
+            <div class="xl">
+              <dl class="dl">
+                <dd><a class="xla" href="about.html#tab1">长投介绍</a></dd>
+                <dd><a class="xla" href="about.html#tab2">员工风采</a></dd>
+              </dl>
+            </div>
+          </li>
+          <li id="nav3" class="xiala">
+            <a class="navA" href="course.html#tab1"><span>课程中心</span><em></em></a>
+            <div class="xl">
+              <dl class="dl">
+                <dd><a class="xla" href="course.html#tab1">理财通识课</a></dd>
+                <dd><a class="xla" href="course.html#tab2">理财入门课</a></dd>
+                <dd><a class="xla" href="course.html#tab3">主流投资课</a></dd>
+                <dd>
+                  <a class="xla" href="course.html#tab4">人群定制类课程</a>
+                </dd>
+              </dl>
+            </div>
+          </li>
+          <li id="nav4">
+            <a class="navA" href="job.html"><span>人才招聘</span><em></em></a>
+          </li>
+        </ul>
+        <div class="clear"></div>
+      </div>
+      <!--/导航-->
+      <div class="clear"></div>
+    </div>
+  </header>
+  <script>
+    //手机版导航
+    $(".header .navBtn").click(function () {
+      $(this).toggleClass("navBtnon");
+      $(".header .mainnav")
+        .stop(true)
+        .slideToggle();
+    });
+    //下拉导航
+    $(".mainnav .ul li .navA").click(function (e) {
+      var _this = $(this).parents("li");
+
+      if ($(window).width() < 1000) {
+        if (_this.find("dd").size() > 0) {
+          _this
+            .find(".xl")
+            .stop(true)
+            .slideToggle();
+          _this
+            .siblings("li")
+            .find(".xl")
+            .slideUp();
+          return false;
+        }
+      }
+    });
+
+    $("#nav" + navID).addClass("on");
+  </script>
+  <!--/头部-->
+
+  <!--网页主体部分-->
+  <section class="Mian">
+    <div class="container">
+      <div class="MianCon">
+        <div class="MainTitle">
+          <h3 class="h3">公司动态</h3>
+          <h4 class="h4"></h4>
+        </div>
+
+        <div class="clear"></div>
+        <!--内容-->
+        <div class="newsdiv">
+          <div class="list">
+            <ul class="ul">
+              <li class="libox">
+                <a href="http://sh.qq.com/a/20181024/011990.htm" target="_blank">
+                  <div class="imgbox">
+                    <div class="img">
+                      <img src="images/news2.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="txtbox">
+                    <div class="tit">
+                      <h3 class="h3">
+                        历时8年探索理财“轻教育”，长投与用户共话财商教育
+                      </h3>
+                    </div>
+                    <div class="txt">
+                      10月20日至21日，国内在线理财教育机构长投学堂在上海举办了第5届年会。会上，长投学堂的创始团队也首次对外披露，8年多探索出的理财“轻教育”下的社群模式，逐步建立了全国最大理财教育机构的历程。<br />此次年会共邀请了千余位全国各地的用户代表参与。同时，作为长投学堂A轮融资的领投者，涌铧投资和成为资本也到场见证了长投学堂1亿元A轮融资仪式。
+                    </div>
+                    <div class="fabu">
+                      <img src="images/tengxun.png" /><span>腾讯·大申网</span><span>2018年10月</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+
+              <li class="libox">
+                <a href="http://sh.sina.com.cn/news/economy/2018-09-05/detail-ihitesuy5569553.shtml?qq-pf-to=pcqq.temporaryc2c"
+                  target="_blank">
+                  <div class="imgbox">
+                    <div class="img">
+                      <img src="images/newspic11.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="txtbox">
+                    <div class="tit">
+                      <h3 class="h3">
+                        长投学堂完成1亿元A轮融资 付费用户已超过200万
+                      </h3>
+                    </div>
+                    <div class="txt">
+                      日前,在线理财教育机构长投学堂宣布完成1亿元人民币A轮融资,刷新了该品类单笔融资记录。据悉,本轮融资由涌铧投资和成为资本联合领投,安可资本担任本轮融资独家财务顾问。<br />长投学堂联合创始人黄艳(笔名水湄物语)表示,本轮融资之后,长投学堂将继续加大课程研发力度,为用户提供更加个性化、定制化的课程辅导,同时也将沿用长投学堂温暖亲切的社群模式,激励用户学完课程,并指导他们付诸实践,以期让更多的人开始理财,改变生活现状。
+                    </div>
+                    <div class="fabu">
+                      <img src="images/newsico2.png" /><span>搜狐</span><span>2018年9月</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+
+              <li class="libox">
+                <a href="https://view.inews.qq.com/a/20180830A0H7ZH00?uid=" target="_blank">
+                  <div class="imgbox">
+                    <div class="img">
+                      <img src="images/newspic22.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="txtbox">
+                    <div class="tit">
+                      <h3 class="h3">
+                        八年深耕 长投学堂专注打造一站式理财教育平台
+                      </h3>
+                    </div>
+                    <div class="txt">
+                      中新网上海新闻8月29日电
+                      (汪青)随着当前国民可支配收入的不断提高，财商已成为与智商、情商并列的现代社会能力三大不可或缺的素质；然而，现实情况是，当前中国城市居民财商平均得分仅为60.1分，刚刚及格。可喜的是，目前，全国有超过200万理财小白，通过在长投学堂上的系统学习，正在或者已经实现着人生蜕变，他们或者实现了自己的买车买房梦，或者实现了自己的环球旅行梦，还有些甚至实现了阶级跃迁。
+                    </div>
+                    <div class="fabu">
+                      <img src="images/newsico1.png" /><span>财新</span><span>2018年8月</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+
+              <li class="libox">
+                <a href="https://cj.sina.com.cn/articles/view/6582349996/18856b0ac00100cajf?from=finance&amp;subch=nauto&amp;qq-pf-to=pcqq.temporaryc2c&amp;display=0&amp;retcode=0"
+                  target="_blank">
+                  <div class="imgbox">
+                    <div class="img">
+                      <img src="images/newspic33.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="txtbox">
+                    <div class="tit">
+                      <h3 class="h3">
+                        超百亿在线财商教育市场，“长投学堂”C位出道
+                      </h3>
+                    </div>
+                    <div class="txt">
+                      在发达国家，财商教育是国民基础教育的一部分，而在中国目前尚未纳入国民教育体系。不过，近年来随着国民收入水平的不断提升，不少人开始尝试理财，而如何理性的理财也成为了很多人关注的问题之一。<br />
+                      成立于2011年的长投学堂，率先看到了国内财商教育的空白，于是针对大众小白，开启了专业的一站式在线理财教育。经过近8年的发展，目前长投学堂的课程体系涵盖了股票、基金、保险和海外投资等，旨在帮助每一位大众小白消除理财焦虑，从零开始掌握投资理财技巧。
+                    </div>
+                    <div class="fabu">
+                      <img src="images/newsico2.png" /><span>搜狐</span><span>2018年9月</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+
+              <div class="clear"></div>
+            </ul>
+          </div>
+        </div>
+        <!--/内容-->
+      </div>
+    </div>
+  </section>
+  <!--网页主体部分-->
+
+  <div class="clear"></div>
+
+  <!--底部-->
+  <footer class="footer">
+    <div class="container">
+      © All Rights Reserved 上海昌投网络科技有限公司 |
+      <a class="ahref" href="http://www.miitbeian.gov.cn">沪ICP备13007095号</a> |
+      <a class="ahref" href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31011502008402">沪公网安备 31011502008402号</a> <br />
+      <br />
+      公司地址：上海市浦东新区龙东大道3000号10号楼弘源科创大厦6F&nbsp;&nbsp;&nbsp;&nbsp;客服电话：021-58953739
+    </div>
+  </footer>
+  <!--/底部-->
+</body>
+
+</html>

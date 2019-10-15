@@ -1,0 +1,762 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>人才招聘</title>
+  <!-- 项目初始化样式 -->
+  <link rel="icon" href="images/changtou.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="images/changtou.ico" type="image/x-icon" />
+  <link rel="stylesheet" type="text/css" href="css/whir_css-v=2018926.css">
+  <script src="js/jquery-1.11.1.min.js"></script>
+  <script src="js/jquery.bxslider.js"></script>
+
+  <!-- HTML5 shim 和 Respond.js用于IE8支持HTML5标签和媒介查询  -->
+  <!--[if lt IE 9]>
+<script src="js/html5shiv3.7.3.min.js"></script>
+<script src="js/respondv1.4.2.min.js"></script>
+<![endif]-->
+  <!-- <script>
+//判断访问设备，方便后面针对不同设备调用代码
+var dev = "";
+if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+    //设备为移动端
+    dev = "mobile";
+    $("html").addClass("mobile");
+}
+else {
+    //设备为pc
+    dev = "pc";
+    $("html").addClass("pc");
+}
+
+//定义设备宽度和高度
+var dw = $(window).width(),
+    dh = $(window).height();
+    
+//console.log("当前使用设备为：" + dev + "||设备宽度为：" + dw + "||设备高度为：" + dh);
+</script> -->
+
+  <script src="js/base.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/slick.css">
+  <script src="js/slick.js"></script>
+  <script>
+    //定义栏目ID
+    var navID = 4,
+      menuID = 0;
+  </script>
+</head>
+
+<body class="jobbody">
+  <!--头部-->
+  <header class="header wheader">
+    <div class="headerBox ">
+      <div class="TopLeft"> <a class="logo" href='index.html'></a> <a href="javascript:;" class="navBtn"> <span class="span1"></span>
+          <span class="span2"></span> <span class="span3"></span> </a>
+        <div class="clear"></div>
+      </div>
+      <!--导航-->
+      <div class="mainnav">
+        <ul class="ul clearfix">
+          <li id="nav1"><a class="navA" href='index.html'><span>首页</span><em></em></a></li>
+          <li id="nav2" class="xiala"><a class="navA" href='about.html#tab1'><span>关于我们</span><em></em></a>
+            <div class="xl">
+              <dl class="dl">
+                <dd><a class="xla" href="about.html#tab1">长投介绍</a></dd>
+                <dd><a class="xla" href="about.html#tab2">员工风采</a></dd>
+              </dl>
+            </div>
+          </li>
+          <li id="nav3" class="xiala"><a class="navA" href='course.html#tab1'><span>课程中心</span><em></em></a>
+            <div class="xl">
+              <dl class="dl">
+                <dd><a class="xla" href="course.html#tab1">理财通识课</a></dd>
+                <dd><a class="xla" href="course.html#tab2">理财入门课</a></dd>
+                <dd><a class="xla" href="course.html#tab3">主流投资课</a></dd>
+                <dd><a class="xla" href="course.html#tab4">人群定制类课程</a></dd>
+              </dl>
+            </div>
+          </li>
+          <li id="nav4"> <a class="navA" href='job.html'><span>人才招聘</span><em></em></a></li>
+        </ul>
+        <div class="clear"></div>
+      </div>
+      <!--/导航-->
+      <div class="clear"></div>
+    </div>
+  </header>
+  <script>
+    //手机版导航
+    $('.header .navBtn').click(function () {
+      $(this).toggleClass('navBtnon');
+      $('.header .mainnav').stop(true).slideToggle();
+    });
+    //下拉导航
+    $('.mainnav .ul li .navA').click(function (e) {
+      var _this = $(this).parents('li')
+
+      if ($(window).width() < 1000) {
+        if (_this.find('dd').size() > 0) {
+          _this.find('.xl').stop(true).slideToggle();
+          _this.siblings('li').find('.xl').slideUp();
+          return false;
+        }
+      }
+    });
+
+    $("#nav" + navID).addClass('on');
+  </script>
+  <!--/头部-->
+  <!--banner-->
+  <section id="team">
+    <div class="employees">
+      <div class="team onediv">
+        <div class="people current" data-left="0" style="">
+          <div class="employee" style="width: 69px; height: 69px; left: 1600.5px; top: 182.5px;"><a class="circle"
+              style="background-image:url('images/join/benben.jpg');"></a></div>
+          <div class="employee" style="width: 96px; height: 96px; left: 1862px; top: 136px;"><a class="circle" style="background-image:url('images/join/biaoshu.jpg');"></a></div>
+          <div class="employee" style="width: 94px; height: 94px; left: 2050px; top: 118px;"><a class="circle" style="background-image:url('images/join/bilaoye.jpg');"></a></div>
+          <div class="employee" style="width: 89px; height: 89px; left: 2250.5px; top: 241.5px;"><a class="circle"
+              style="background-image:url('images/join/bo.jpg');"></a></div>
+          <div class="employee" style="width: 94px; height: 94px; left: 2408px; top: 125px;"><a class="circle" style="background-image:url('images/join/bobo.jpg');"></a></div>
+          <div class="employee" style="width: 64px; height: 64px; left: 1749px; top: 268px;"><a class="circle" style="background-image: url('images/join/chenxi.jpg');"></a></div>
+          <div class="employee" style="width: 57px; height: 57px; left: 1978.5px; top: 173.5px;"><a class="circle"
+              style="background-image:url('images/join/dada.jpg');"></a></div>
+          <div class="employee" style="width: 57px; height: 57px; left: 1833.5px; top: 241.5px;"><a class="circle"
+              style="background-image:url('images/join/daruirui.jpg');"></a></div>
+          <div class="employee" style="width: 68px; height: 68px; left: 1978px; top: 75px;"><a class="circle" style="background-image:url('images/join/dashu.jpg');"></a></div>
+          <div class="employee" style="width: 63px; height: 63px; left: 2148.5px; top: 192.5px;"><a class="circle"
+              style="background-image:url('images/join/daxi.jpg');"></a></div>
+          <div class="employee" style="width: 66px; height: 66px; left: 2346px; top: 307px;"><a class="circle" style="background-image:url('images/join/dayao.jpg');"></a></div>
+          <div class="employee" style="width: 61px; height: 61px; left: 2357.5px; top: 222.5px;"><a class="circle"
+              style="background-image:url('images/join/dazhuang.jpg');"></a></div>
+          <div class="employee" style="width: 66px; height: 66px; left: 2511px; top: 188px;"><a class="circle" style="background-image:url('images/join/dun.jpg');"></a></div>
+          <div class="employee" style="width: 61px; height: 61px; left: 2501.5px; top: 79.5px;"><a class="circle" style="background-image:url('images/join/echo.jpg');"></a></div>
+          <div class="employee" style="width: 69px; height: 69px; left: 1701.5px; top: 92.5px;"><a class="circle" style="background-image: url('images/join/erdaye.jpg');"></a></div>
+          <div class="employee" style="width: 66px; height: 66px; left: 1803px; top: 79px;"><a class="circle" style="background-image:url('images/join/fanfan.jpg');"></a></div>
+          <div class="employee" style="width: 57px; height: 57px; left: 2051.5px; top: 230.5px;"><a class="circle"
+              style="background-image:url('images/join/feifei.jpg');"></a></div>
+          <div class="employee" style="width: 66px; height: 66px; left: 2173px; top: 301px;"><a class="circle" style="background-image:url('images/join/fengche.jpg');"></a></div>
+          <div class="employee" style="width: 57px; height: 57px; left: 1898.5px; top: 285.5px;"><a class="circle"
+              style="background-image: url('images/join/gaomei.jpg');"></a></div>
+          <div class="employee" style="width: 56px; height: 56px; left: 1905px; top: 56px;"><a class="circle" style="background-image:url('images/join/haodong.jpg');"></a></div>
+          <div class="employee" style="width: 64px; height: 64px; left: 2222px; top: 147px;"><a class="circle" style="background-image:url('images/join/hujunjun.jpg');"></a></div>
+          <div class="employee" style="width: 57px; height: 57px; left: 2429.5px; top: 283.5px;"><a class="circle"
+              style="background-image:url('images/join/yibao.jpg');"></a></div>
+          <div class="employee" style="width: 60px; height: 60px; left: 2325px; top: 145px;"><a class="circle" style="background-image: url('images/join/huqiaowen.jpg');"></a></div>
+          <div class="employee" style="width: 69px; height: 69px; left: 2556.5px; top: 265.5px;"><a class="circle"
+              style="background-image:url('images/join/jinbao.jpg');"></a></div>
+          <div class="employee" style="width: 56px; height: 56px; left: 1925px; top: 357px;"><a class="circle" style="background-image:url('images/join/zhuningjun.jpg');"></a></div>
+          <div class="employee" style="width:57px; height: 57px; left:1835.5px; top:310.5px;"><a class="circle" style="background-image:url('images/join/zunzun.jpg');"></a></div>
+          <div class="employee" style="width: 59px; height: 59px; left: 2543.5px; top: 334.5px;"><a class="circle"
+              style="background-image:url('images/join/youzi.jpg');"></a></div>
+          <div class="employee" style="width: 60px; height: 60px; left: 2631px; top: 349px;"><a class="circle" style="background-image: url('images/join/yiyi.jpg');"></a></div>
+          <div class="employee" style="width: 64px; height: 64px; left: 2171px; top: 56px;"><a class="circle" style="background-image: url('images/join/jingjing.jpg');"></a></div>
+          <div class="employee" style="width: 40px; height: 40px; left: 2395px; top: 31px;"><a class="circle" style="background-image:url('images/join/joni.jpg');"></a></div>
+          <div class="employee" style="width: 57px; height: 57px;left: 2725.5px; top: 34.5px; "><a class="circle" style="background-image:url('images/join/zuoyou.jpg');"></a></div>
+          <div class="employee" style="width: 43px; height: 43px; left: 2481.5px; top: 32.5px;"><a class="circle" style="background-image:url('images/join/yuanyuan.jpg');"></a></div>
+          <div class="employee" style="width: 86px; height:86px; left: 1624px; top: 331px;"><a class="circle" style="background-image: url('images/join/lanlan.jpg');"></a></div>
+          <div class="employee" style="width: 47px; height: 47px; left: 1796.5px; top: 385.5px;"><a class="circle"
+              style="background-image: url('images/join/leiz.jpg');"></a></div>
+          <div class="employee" style="width: 60px; height: 60px; left: 1754px; top: 176px;"><a class="circle" style="background-image:url('images/join/lili.jpg');"></a></div>
+          <div class="employee" style="width: 40px; height: 40px; left: 2454px; top: 389px;"><a class="circle" style="background-image:url('images/join/lily.jpg');"></a></div>
+          <div class="employee" style="width: 59px; height: 59px; left: 2621.5px; top: 191.5px;"><a class="circle"
+              style="background-image:url('images/join/lip.jpg');"></a></div>
+          <div class="employee" style="width: 50px; height: 50px; left: 2623px; top: 90px;"><a class="circle" style="background-image:url('images/join/lizi.jpg');"></a></div>
+          <div class="employee" style="width: 38px; height: 38px; left: 2331px; top: 383px;"><a class="circle" style="background-image:url('images/join/zhanzheng.jpg');"></a></div>
+          <div class="employee" style="width: 42px; height: 42px; left: 2094px; top: 345px;"><a class="circle" style="background-image: url('images/join/loulou.jpg');"></a></div>
+          <div class="employee" style="width: 37px; height: 37px; left: 2278.5px; top: 381.5px;"><a class="circle"
+              style="background-image:url('images/join/luban.jpg');"></a></div>
+          <div class="employee" style="width: 44px; height: 44px; left: 2000px; top: 361px;"><a class="circle" style="background-image: url('images/join/Lucian-Lang.jpg');"></a></div>
+          <div class="employee" style="width: 51px; height: 51px; left: 2269.5px; top: 52.5px;"><a class="circle" style="background-image:url('images/join/maomao.jpg');"></a></div>
+          <div class="employee" style="width: 100px; height:100px; left:2700px; top:168px;"><a class="circle" style="background-image:url('https://ict-course.ichangtou.com/web/pictureLogo.png'); border:1px solid #d8dee3;"></a></div>
+        </div>
+
+
+        <div class="people next" data-left="2761" style="">
+          <div class="employee" style="width: 92px; height: 92px; left: 291px; top: 150px; "><a class="circle" style="background-image:url('images/join/nemo.jpg');"></a></div>
+          <div class="employee" style="width: 88px; height: 88px; left: 499px; top: 222px; "><a class="circle" style="background-image:url('images/join/peipei.jpg');"></a></div>
+          <div class="employee" style="width: 63px; height: 63px; left: 270.5px; top: 72.5px; "><a class="circle" style="background-image:url('images/join/peiqi.jpg');"></a></div>
+          <div class="employee" style="width: 66px; height: 66px; left: 270px; top: 261px; "><a class="circle" style="background-image:url('images/join/rouding.jpg');"></a></div>
+          <div class="employee" style="width: 68px; height: 68px; left: 551px; top: 324px; "><a class="circle" style="background-image:url('images/join/shengnan.jpg');"></a></div>
+          <div class="employee" style="width: 58px; height: 58px; left: 497px; top: 145px; "><a class="circle" style="background-image:url('images/join/shuimeijie.jpg');"></a></div>
+          <div class="employee" style="width: 62px; height: 62px; left: 208px; top: 168px; "><a class="circle" style="background-image:url('images/join/sijia.jpg');"></a></div>
+          <div class="employee" style="width: 59px; height: 59px; left: 454.5px; top: 314.5px; "><a class="circle"
+              style="background-image:url('images/join/sisi.jpg');"></a></div>
+          <div class="employee" style="width: 70px; height: 70px; left: 196px; top: 315px; "><a class="circle" style="background-image:url('images/join/suofei.jpg');"></a></div>
+          <div class="employee" style="width: 59px; height: 59px; left: 541.5px; top: 74.5px; "><a class="circle" style="background-image:url('images/join/tangxiaoguo.jpg');"></a></div>
+          <div class="employee" style="width: 60px; height: 60px; left: 404px; top: 236px; "><a class="circle" style="background-image:url('images/join/wangpeng.jpg');"></a></div>
+          <div class="employee" style="width: 59px; height: 59px; left: 411.5px; top: 90.5px; "><a class="circle" style="background-image:url('images/join/xian.jpg');"></a></div>
+          <div class="employee" style="width: 39px; height: 39px; left: 170.5px; top: 84.5px; "><a class="circle" style="background-image:url('images/join/xiangcao.jpg');"></a></div>
+          <div class="employee" style="width: 45px; height: 45px; left: 373.5px; top: 338.5px; "><a class="circle"
+              style="background-image:url('images/join/xiaomahua.jpg');"></a></div>
+          <div class="employee" style="width: 63px; height: 63px; left: 122.5px; top: 229.5px;"><a class="circle" style="background-image:url('images/join/xiaoqi.jpg');"></a></div>
+          <div class="employee" style="width: 43px; height: 43px; left: 88.5px; top: 328.5px;"><a class="circle" style="background-image:url('images/join/xiaoqi1.jpg');"></a></div>
+          <div class="employee" style="width: 50px; height: 50px; left: 613px; top: 154px;"><a class="circle" style="background-image:url('images/join/xiaoqiang.jpg');"></a></div>
+          <div class="employee" style="width: 64px; height: 64px; left: 623px; top: 252px;"><a class="circle" style="background-image:url('images/join/xiaoqiao.jpg');"></a></div>
+          <div class="employee" style="width: 61px; height: 61px; left: 680.5px; top: 340.5px;"><a class="circle" style="background-image:url('images/join/xiaoxingxing.jpg');"></a></div>
+          <div class="employee" style="width: 45px; height: 45px; left: 645.5px; top: 19.5px;"><a class="circle" style="background-image:url('images/join/xiaoxiong.jpg');"></a></div>
+          <div class="employee" style="width: 65px; height: 65px; left: 677.5px; top: 176.5px;"><a class="circle" style="background-image:url('images/join/xiaoyuzou.jpg');"></a></div>
+          <div class="employee" style="width: 69px; height: 69px; left: 740.5px; top: 85.5px;"><a class="circle" style="background-image:url('images/join/xiayu.jpg');"></a></div>
+          <div class="employee" style="width: 74px; height: 74px; left: 71px; top: 107px;"><a class="circle" style="background-image:url('images/join/xuejie.jpg');"></a></div>
+        </div>
+      </div>
+
+
+      <div class="team twodiv">
+        <div class="people current" data-left="0" style="">
+          <div class="employee" style="width: 69px; height: 69px; left: 1600.5px; top: 182.5px;"><a class="circle"
+              style="background-image:url('images/join/benben.jpg');"></a></div>
+          <div class="employee" style="width: 96px; height: 96px; left: 1862px; top: 136px;"><a class="circle" style="background-image:url('images/join/biaoshu.jpg');"></a></div>
+          <div class="employee" style="width: 94px; height: 94px; left: 2050px; top: 118px;"><a class="circle" style="background-image:url('images/join/bilaoye.jpg');"></a></div>
+          <div class="employee" style="width: 89px; height: 89px; left: 2250.5px; top: 241.5px;"><a class="circle"
+              style="background-image:url('images/join/bo.jpg');"></a></div>
+          <div class="employee" style="width: 94px; height: 94px; left: 2408px; top: 125px;"><a class="circle" style="background-image:url('images/join/bobo.jpg');"></a></div>
+          <div class="employee" style="width: 64px; height: 64px; left: 1749px; top: 268px;"><a class="circle" style="background-image: url('images/join/chenxi.jpg');"></a></div>
+          <div class="employee" style="width: 57px; height: 57px; left: 1978.5px; top: 173.5px;"><a class="circle"
+              style="background-image:url('images/join/dada.jpg');"></a></div>
+          <div class="employee" style="width: 57px; height: 57px; left: 1833.5px; top: 241.5px;"><a class="circle"
+              style="background-image:url('images/join/daruirui.jpg');"></a></div>
+          <div class="employee" style="width: 68px; height: 68px; left: 1978px; top: 75px;"><a class="circle" style="background-image:url('images/join/dashu.jpg');"></a></div>
+          <div class="employee" style="width: 63px; height: 63px; left: 2148.5px; top: 192.5px;"><a class="circle"
+              style="background-image:url('images/join/daxi.jpg');"></a></div>
+          <div class="employee" style="width: 66px; height: 66px; left: 2346px; top: 307px;"><a class="circle" style="background-image:url('images/join/dayao.jpg');"></a></div>
+          <div class="employee" style="width: 61px; height: 61px; left: 2357.5px; top: 222.5px;"><a class="circle"
+              style="background-image:url('images/join/dazhuang.jpg');"></a></div>
+          <div class="employee" style="width: 66px; height: 66px; left: 2511px; top: 188px;"><a class="circle" style="background-image:url('images/join/dun.jpg');"></a></div>
+          <div class="employee" style="width: 61px; height: 61px; left: 2501.5px; top: 79.5px;"><a class="circle" style="background-image:url('images/join/echo.jpg');"></a></div>
+          <div class="employee" style="width: 69px; height: 69px; left: 1701.5px; top: 92.5px;"><a class="circle" style="background-image: url('images/join/erdaye.jpg');"></a></div>
+          <div class="employee" style="width: 66px; height: 66px; left: 1803px; top: 79px;"><a class="circle" style="background-image:url('images/join/fanfan.jpg');"></a></div>
+          <div class="employee" style="width: 57px; height: 57px; left: 2051.5px; top: 230.5px;"><a class="circle"
+              style="background-image:url('images/join/feifei.jpg');"></a></div>
+          <div class="employee" style="width: 66px; height: 66px; left: 2173px; top: 301px;"><a class="circle" style="background-image:url('images/join/fengche.jpg');"></a></div>
+          <div class="employee" style="width: 57px; height: 57px; left: 1898.5px; top: 285.5px;"><a class="circle"
+              style="background-image: url('images/join/gaomei.jpg');"></a></div>
+          <div class="employee" style="width: 56px; height: 56px; left: 1905px; top: 56px;"><a class="circle" style="background-image:url('images/join/haodong.jpg');"></a></div>
+          <div class="employee" style="width: 64px; height: 64px; left: 2222px; top: 147px;"><a class="circle" style="background-image:url('images/join/hujunjun.jpg');"></a></div>
+          <div class="employee" style="width: 57px; height: 57px; left: 2429.5px; top: 283.5px;"><a class="circle"
+              style="background-image:url('images/join/yibao.jpg');"></a></div>
+          <div class="employee" style="width: 60px; height: 60px; left: 2325px; top: 145px;"><a class="circle" style="background-image: url('images/join/huqiaowen.jpg');"></a></div>
+          <div class="employee" style="width: 69px; height: 69px; left: 2556.5px; top: 265.5px;"><a class="circle"
+              style="background-image:url('images/join/jinbao.jpg');"></a></div>
+          <div class="employee" style="width: 56px; height: 56px; left: 1925px; top: 357px;"><a class="circle" style="background-image:url('images/join/zhuningjun.jpg');"></a></div>
+          <div class="employee" style="width:57px; height: 57px; left:1835.5px; top:310.5px;"><a class="circle" style="background-image:url('images/join/zunzun.jpg');"></a></div>
+          <div class="employee" style="width: 59px; height: 59px; left: 2543.5px; top: 334.5px;"><a class="circle"
+              style="background-image:url('images/join/youzi.jpg');"></a></div>
+          <div class="employee" style="width: 60px; height: 60px; left: 2631px; top: 349px;"><a class="circle" style="background-image: url('images/join/yiyi.jpg');"></a></div>
+          <div class="employee" style="width: 64px; height: 64px; left: 2171px; top: 56px;"><a class="circle" style="background-image: url('images/join/jingjing.jpg');"></a></div>
+          <div class="employee" style="width: 40px; height: 40px; left: 2395px; top: 31px;"><a class="circle" style="background-image:url('images/join/joni.jpg');"></a></div>
+          <div class="employee" style="width: 57px; height: 57px;left: 2725.5px; top: 34.5px; "><a class="circle" style="background-image:url('images/join/zuoyou.jpg');"></a></div>
+          <div class="employee" style="width: 43px; height: 43px; left: 2481.5px; top: 32.5px;"><a class="circle" style="background-image:url('images/join/yuanyuan.jpg');"></a></div>
+          <div class="employee" style="width: 86px; height:86px; left: 1624px; top: 331px;"><a class="circle" style="background-image: url('images/join/lanlan.jpg');"></a></div>
+          <div class="employee" style="width: 47px; height: 47px; left: 1796.5px; top: 385.5px;"><a class="circle"
+              style="background-image: url('images/join/leiz.jpg');"></a></div>
+          <div class="employee" style="width: 60px; height: 60px; left: 1754px; top: 176px;"><a class="circle" style="background-image:url('images/join/lili.jpg');"></a></div>
+          <div class="employee" style="width: 40px; height: 40px; left: 2454px; top: 389px;"><a class="circle" style="background-image:url('images/join/lily.jpg');"></a></div>
+          <div class="employee" style="width: 59px; height: 59px; left: 2621.5px; top: 191.5px;"><a class="circle"
+              style="background-image:url('images/join/lip.jpg');"></a></div>
+          <div class="employee" style="width: 50px; height: 50px; left: 2623px; top: 90px;"><a class="circle" style="background-image:url('images/join/lizi.jpg');"></a></div>
+          <div class="employee" style="width: 38px; height: 38px; left: 2331px; top: 383px;"><a class="circle" style="background-image:url('images/join/zhanzheng.jpg');"></a></div>
+          <div class="employee" style="width: 42px; height: 42px; left: 2094px; top: 345px;"><a class="circle" style="background-image: url('images/join/loulou.jpg');"></a></div>
+          <div class="employee" style="width: 37px; height: 37px; left: 2278.5px; top: 381.5px;"><a class="circle"
+              style="background-image:url('images/join/luban.jpg');"></a></div>
+          <div class="employee" style="width: 44px; height: 44px; left: 2000px; top: 361px;"><a class="circle" style="background-image: url('images/join/Lucian-Lang.jpg');"></a></div>
+          <div class="employee" style="width: 51px; height: 51px; left: 2269.5px; top: 52.5px;"><a class="circle" style="background-image:url('images/join/maomao.jpg');"></a></div>
+          <div class="employee" style="width: 100px; height:100px; left:2700px; top:168px;"><a class="circle" style="background-image:url('https://ict-course.ichangtou.com/web/pictureLogo.png'); border:1px solid #d8dee3;"></a></div>
+        </div>
+
+
+        <div class="people next" data-left="2761">
+          <div class="employee" style="width: 92px; height: 92px; left: 291px; top: 150px; "><a class="circle" style="background-image:url('images/join/nemo.jpg');"></a></div>
+          <div class="employee" style="width: 88px; height: 88px; left: 499px; top: 222px; "><a class="circle" style="background-image:url('images/join/peipei.jpg');"></a></div>
+          <div class="employee" style="width: 63px; height: 63px; left: 270.5px; top: 72.5px; "><a class="circle" style="background-image:url('images/join/peiqi.jpg');"></a></div>
+          <div class="employee" style="width: 66px; height: 66px; left: 270px; top: 261px; "><a class="circle" style="background-image:url('images/join/rouding.jpg');"></a></div>
+          <div class="employee" style="width: 68px; height: 68px; left: 551px; top: 324px; "><a class="circle" style="background-image:url('images/join/shengnan.jpg');"></a></div>
+          <div class="employee" style="width: 58px; height: 58px; left: 497px; top: 145px; "><a class="circle" style="background-image:url('images/join/shuimeijie.jpg');"></a></div>
+          <div class="employee" style="width: 62px; height: 62px; left: 208px; top: 168px; "><a class="circle" style="background-image:url('images/join/sijia.jpg');"></a></div>
+          <div class="employee" style="width: 59px; height: 59px; left: 454.5px; top: 314.5px; "><a class="circle"
+              style="background-image:url('images/join/sisi.jpg');"></a></div>
+          <div class="employee" style="width: 70px; height: 70px; left: 196px; top: 315px; "><a class="circle" style="background-image:url('images/join/suofei.jpg');"></a></div>
+          <div class="employee" style="width: 59px; height: 59px; left: 541.5px; top: 74.5px; "><a class="circle" style="background-image:url('images/join/tangxiaoguo.jpg');"></a></div>
+          <div class="employee" style="width: 60px; height: 60px; left: 404px; top: 236px; "><a class="circle" style="background-image:url('images/join/wangpeng.jpg');"></a></div>
+          <div class="employee" style="width: 59px; height: 59px; left: 411.5px; top: 90.5px; "><a class="circle" style="background-image:url('images/join/xian.jpg');"></a></div>
+          <div class="employee" style="width: 39px; height: 39px; left: 170.5px; top: 84.5px; "><a class="circle" style="background-image:url('images/join/xiangcao.jpg');"></a></div>
+          <div class="employee" style="width: 45px; height: 45px; left: 373.5px; top: 338.5px; "><a class="circle"
+              style="background-image:url('images/join/xiaomahua.jpg');"></a></div>
+          <div class="employee" style="width: 63px; height: 63px; left: 122.5px; top: 229.5px;"><a class="circle" style="background-image:url('images/join/xiaoqi.jpg');"></a></div>
+          <div class="employee" style="width: 43px; height: 43px; left: 88.5px; top: 328.5px;"><a class="circle" style="background-image:url('images/join/xiaoqi1.jpg');"></a></div>
+          <div class="employee" style="width: 50px; height: 50px; left: 613px; top: 154px;"><a class="circle" style="background-image:url('images/join/xiaoqiang.jpg');"></a></div>
+          <div class="employee" style="width: 64px; height: 64px; left: 623px; top: 252px;"><a class="circle" style="background-image:url('images/join/xiaoqiao.jpg');"></a></div>
+          <div class="employee" style="width: 61px; height: 61px; left: 680.5px; top: 340.5px;"><a class="circle" style="background-image:url('images/join/xiaoxingxing.jpg');"></a></div>
+          <div class="employee" style="width: 45px; height: 45px; left: 645.5px; top: 19.5px;"><a class="circle" style="background-image:url('images/join/xiaoxiong.jpg');"></a></div>
+          <div class="employee" style="width: 65px; height: 65px; left: 677.5px; top: 176.5px;"><a class="circle" style="background-image:url('images/join/xiaoyuzou.jpg');"></a></div>
+          <div class="employee" style="width: 69px; height: 69px; left: 740.5px; top: 85.5px;"><a class="circle" style="background-image:url('images/join/xiayu.jpg');"></a></div>
+          <div class="employee" style="width: 74px; height: 74px; left: 71px; top: 107px;"><a class="circle" style="background-image:url('images/join/xuejie.jpg');"></a></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <script>
+    var $headImgg = $('.circle');
+    console.log($headImgg[0])
+    $headImgg.map(function (index, item) {
+      item.css('transform', 'scale(2)')
+      console.log(item)
+    })
+  </script>
+  <!--/banner-->
+
+  <div class="clear"></div>
+
+  <!--网页主体部分-->
+  <section class="Mian">
+    <div class="MianCon">
+      <div class="title">长投学堂期待你的加入</div>
+      <!--人才招聘-->
+      <div class="jobMain">
+        <div class="container">
+          <!--标签切换-->
+          <div class="jobNav">
+            <ul class="ul">
+              <li class="on" id="m01"><a href="javascript:;">产品研发部</a></li>
+              <li id="m02"><a href="javascript:;">市场部</a></li>
+              <li id="m03"><a href="javascript:;">大数据</a></li>
+              <li id="m04"><a href="javascript:;">主营部</a></li>
+              <li id="m05"><a href="javascript:;">人事行政部</a></li>
+              <li id="m06"><a href="javascript:;">其他</a></li>
+              <div class="clear"></div>
+            </ul>
+          </div>
+          <!--切换内容-->
+          <div class="ItemBox">
+            <!--内容1-->
+            <div class="item" id="c01" style="display:block;">
+              <!--招聘-->
+              <div class="jobNei">
+                <div class="name">高级java工程师</div>
+                <div class="miaoshu">
+                  <h3 class="tit">职位描述：</h3>
+                  1、独立完成项目的系统分析、设计，并能够完成核心代码的编写，确保技术方案能够按计划要求，高质量的完成；<br />
+                  2、对技术有较强的钻研及学习精神，能够了解现有系统相关技术原理，出现问题时能够通过技术手段较好的解决问题；<br />
+                  3、对新人进行有效指导，帮助其快速成长。
+                </div>
+                <div class="yaoqiu">
+                  <h3 class="tit">岗位要求：</h3>
+                  1、工作4年以上<br />
+                  2、JAVA基础扎实，对JVM原理有一定的了解； <br />
+                  3、熟悉主流开源框架，如Spring、MyBatis、SpringBoot等；<br />
+                  4、熟悉常用的中间件，如Redis/ZooKeeper/ActiveMQ等; <br />
+                  5、熟悉分布式系统的设计和应用，对分布式系统设计面临的常见问题有实际处理经验； <br />
+                  6、掌握数据库的基本知识和常用SQL的开发、优化； <br />
+                  7、熟悉Tomcat、Jetty等应用服务器； <br />
+                  8、具有良好的软件工程知识和质量意识；
+                </div>
+                <hr width="10%" />
+                <div class="lianxi">简历请投递至：<a href="mailto:hr@ichangtou.com">hr@ichangtou.com</a></div>
+              </div>
+              <!--/招聘-->
+
+              <!--招聘-->
+              <div class="jobNei">
+                <div class="name">高级web工程师</div>
+                <div class="miaoshu">
+                  <h3 class="tit">职位描述：</h3>
+                  1、能根据产品需求与UI原型完成前端Web的开发工作，使得成果满足设计要求；<br />
+                  2、使用Jquery与后端服务交互。<br />
+                  3、对前端产品的质量全面负责；<br />
+                  4、配合测试人员审核方案；<br />
+                  5、根据测试人员反馈、分析系统缺陷，持续优化产品质量。
+                </div>
+                <div class="yaoqiu">
+                  <h3 class="tit">岗位要求：</h3>
+                  1、本科及以上学历，3年及以上web前端开发经验，熟练掌握CSS3、HTML5、Javascript、Jquery等前端技术；<br />
+                  2、了解各主流浏览器的兼容性情况及兼容调试方法；<br />
+                  3、熟悉常用的AngularJS、VueJS前端框架；有单页应用开发经验、熟悉nodejs相关知识、es6语法、前端工程化工具优先；<br />
+                  4、可高效手写代码，熟悉W3C标准并做到多浏览器兼容；熟悉HTML5/CSS3者优先；<br />
+                  5、能够根据需求，分析并给出最优的前端技术解决方案。<br />
+                  6、具备良好的团队协作精神及创新精神，善于与人沟通，能够承受工作压力；热爱软件开发工作；具有较强的学习能力；
+                </div>
+                <hr width="10%" />
+                <div class="lianxi">简历请投递至：<a href="mailto:hr@ichangtou.com">hr@ichangtou.com</a></div>
+              </div>
+              <!--/招聘-->
+
+              <!--招聘-->
+              <div class="jobNei">
+                <div class="name">web全栈工程师</div>
+                <div class="miaoshu">
+                  <h3 class="tit">职位描述：</h3>
+                  参与我司海外房产投资项目产品研发与迭代，提供前后端编码与维护支持。
+                </div>
+                <div class="yaoqiu">
+                  <h3 class="tit">岗位要求：</h3>
+                  1.本科及以上学历，三年以上后端开发经验，语言为Java或Python；<br />
+                  2. 熟悉主流的Web 应用架构；<br />
+                  3. 熟悉 HTML/CSS/Javascript前端三宝，有Vue或React等前端框架开发经验；<br />
+                  4. 对有质感的页面设计和 UX 有感；<br />
+                  5. 对技术有热情，超强的学习能力、自我驱动；<br />
+                  6. 有微信小程序或微信生态内产品开发经营者优先考虑。
+                </div>
+                <hr width="10%" />
+                <div class="lianxi">简历请投递至：<a href="mailto:hr@ichangtou.com">hr@ichangtou.com</a></div>
+              </div>
+              <!--/招聘-->
+
+              <!--招聘-->
+              <div class="jobNei">
+                <div class="name">测试工程师</div>
+                <div class="miaoshu">
+                  <h3 class="tit">职位描述：</h3>
+                  1、参与各业务的测试工作，对手机App、pc端等进行功能测试；<br />
+                  2、根据需求说明书和其他相关文档设计编写测试用例；<br />
+                  3、提交缺陷，分析测试结果，为解决缺陷提供帮助；<br />
+                  4、提交缺陷报告，做出测试总结。<br />
+                  5、掌握QC、CQ、Bugzilla、Jira、禅道、VSS、SVN工具的使用；<br />
+                  6、掌握SQL语言基础知识，熟悉Mysql、Oracle、DB2数据库操作。<br />
+                  7、熟练使用Linux命令实现基本操作，包括文件管理、用户管理、进程管理
+                </div>
+                <div class="yaoqiu">
+                  <h3 class="tit">岗位要求：</h3>
+                  1. 计算机或软件工程专业本科以上学历，有扎实的计算机基础知识；<br />
+                  2. 3年以上web互联网领域或手机领域相关测试工作经验，精通测试理论、流程和实践；<br />
+                  3. 掌握QC、CQ、Bugzilla、Jira、禅道、VSS、SVN工具的使用；<br />
+                  4. 有Android app和iOS app测试经验<br />
+                  5.掌握SQL语言基础知识，熟悉Mysql、Oracle、DB2数据库操作<br />
+                  6. 熟练使用Linux命令实现基本操作，包括文件管理、用户管理、进程管理<br />
+                  7. 熟练使用各类接口测试工具，具备定位接口缺陷的能力；<br />
+                  8. 学习能力强，良好的问题分析能力、沟通表达能力和解决问题的能力，善于总结和思考、责任心强、能够承受一定的工作压力、工作作风严谨，具有很好的团队合作精神
+                </div>
+                <hr width="10%" />
+                <div class="lianxi">简历请投递至：<a href="mailto:hr@ichangtou.com">hr@ichangtou.com</a></div>
+              </div>
+              <!--/招聘-->
+
+            </div>
+            <!--/内容1-->
+
+            <!--内容2-->
+            <div class="item" id="c02">
+              <!--招聘-->
+              <div class="jobNei">
+                <div class="name">H5前端工程师</div>
+                <div class="miaoshu">
+                  <h3 class="tit">职位描述：</h3>
+                  负责微信公众号H5和小程序的开发及维护
+                </div>
+                <div class="yaoqiu">
+                  <h3 class="tit">岗位要求：</h3>
+                  1、两年及以上前端开发经验，计算机专业优先<br />
+                  2、有公众号H5开发经验，了解微信授权，支付等<br />
+                  3、有小程序开发经验优先<br />
+                  4、精通HTML5、CSS3、js；<br />
+                  5、精通react,vueJS等至少一种前端开发框架<br />
+                  6、会使用 ES6 或 Typescript 优先；<br />
+                  7、精通Canvas等HTML5专有元素；<br />
+                  8、想象力丰富、思维敏捷、工作细心、具有良好的沟通能力，执行能力；<br />
+                  9、工作认真、负责，对技术钻研具有强烈兴趣。
+                </div>
+                <hr width="10%" />
+                <div class="lianxi">简历请投递至：<a href="mailto:hr@ichangtou.com">hr@ichangtou.com</a></div>
+              </div>
+              <!--/招聘-->
+
+              <!--招聘-->
+              <div class="jobNei">
+                <div class="name">线上渠道推广</div>
+                <div class="miaoshu">
+                  <h3 class="tit">职位描述：</h3>
+                  1. 负责公司在线培训产品的线上获客渠道的开发及推广，拓展各类线上获客渠道（KOL、APP硬广、信息流、社群等），负责线上渠道获客KPI达成；<br />
+                  2. 以拉新为核心目标，制定适应公司产品的线上推广计划，能独立开发并维护有利于产品推广的线上渠道合作资源，掌握充足的推广渠道，并保持良好关系；<br />
+                  3.制定渠道获客方案，负责与平台、KOL、APP、网盟渠道、信息流、应用商店等各类渠道合作，完场洽谈、对接、投放优化事宜；<br />
+                  4. 跟进新渠道的上线、维护以及进行后期投放效果的追踪；跟进相关数据并进行分析，定期形成报告，提出优化建议；<br />
+                  5.及时了解行业市场动态，了解竞品动向，及时跟进，逐步扩大并优化有效渠道。<br />
+                  6.对APP推广有一定了解，制定APP在各应用市场、信息流渠道及其他推广策略，达成下载量、安装量目标等关键指标。
+                </div>
+                <div class="yaoqiu">
+                  <h3 class="tit">岗位要求：</h3>
+                  1.具有在线课程类产品的线上渠道获客工作经验优先；<br />
+                  2.拥有良好的KOL、APP、公众号等线上渠道及社会关系资源；<br />
+                  3. 与合作方的谈判和沟通能力强，具有良好的职业形象和职业素质；<br />
+                  4.熟悉APP应用市场推广渠道，有丰富的APP渠道推广资源及运营经验;<br />
+                  5.具有独立工作能力，勇于接受工作挑战，能够承担目标压力；<br />
+                  6.具备较强的学习能力及团队合作精神，良好的个人信誉及职业操守。
+                </div>
+                <hr width="10%" />
+                <div class="lianxi">简历请投递至：<a href="mailto:hr@ichangtou.com">hr@ichangtou.com</a></div>
+              </div>
+              <!--/招聘-->
+            </div>
+            <!--/内容2-->
+
+            <!--内容3-->
+            <div class="item" id="c03">
+              <!--招聘-->
+              <div class="jobNei">
+                <div class="name">高级DBA</div>
+                <div class="miaoshu">
+                  <h3 class="tit">职位描述：</h3>
+                  1、负责公司业务系统数据库的架构设计和实现<br />
+                  2、跟踪数据库技术演进方向，并根据产品需要设计合理的解决方案<br />
+                  3、建立和完善公司数据库技术发展体系，建立相关技术规范和实操标准，为产品研发和运维团队提供技术指导<br />
+                  4、挖掘和发现目前运维体系和数据库开发中存在的问题和不足，提出具体改进方案并推进实施<br />
+                  5、负责数据库部分的内部技术分享，成果输出工作
+                </div>
+                <div class="yaoqiu">
+                  <h3 class="tit">岗位要求：</h3>
+                  1、全日制本科以上学历，3年以上混合异构数据库管理和开发经验，局部较强责任心和自我驱动力<br />
+                  2、精通数据库设计，深入掌握MySql数据库运行机制和体系架构，精通SQL语句<br />
+                  3、属性Redis、MongoDB等NOsql数据存储产品，属性不同类型的数据库的底层运行原理与优缺点<br />
+                  4、熟练掌握Linux系统，具有优秀的数据库运维能力，对于关系数据库的系统级优化有清晰的思路<br />
+                  5、对数据敏感，逻辑思维清晰有条理，严谨细致，良好的分析能力，沟通能力和文子表达能力，责任心强，能承受压力，注重团队协作<br />
+                  6、具有优秀的团队意识和沟通能力，对新技术有好奇心，学习能力和主动性强，有钻研精神，充满激情，乐于接受挑战
+                </div>
+                <hr width="10%" />
+                <div class="lianxi">简历请投递至：<a href="mailto:hr@ichangtou.com">hr@ichangtou.com</a></div>
+              </div>
+              <!--/招聘-->
+
+
+              <!--招聘-->
+              <div class="jobNei">
+                <div class="name">BI高级数据分析</div>
+                <div class="miaoshu">
+                  <h3 class="tit">职位描述：</h3>
+                  1、具备良好的逻辑思维能力，业务解读能力和快速学习能力，能够为业务线提供决策性的数据支持<br />
+                  2、熟悉BI数据方案提醒，建立合理的业务数据监控体系，赋能业务团队快速获得数据，能够帮助业务给出优化建议和方案<br />
+                  3、定期产出行业研究，经营分析，用户研究，竞争对手等分析报告以及专项性分析报告（如营销活动效果评价），帮助业务发现问题和捕捉商机<br />
+                  4、能够独立编写商业数据分析报告，及时发现和分析其中隐含的变化和问题，局部良好的商业敏感度和创新意识<br />
+                  5、具备资源整合和推动落地能力，能够承担团队和项目管理职责
+                </div>
+                <div class="yaoqiu">
+                  <h3 class="tit">岗位要求：</h3>
+                  1、5年以上数据分析相关工作经验，3年以上团队管理经验<br />
+                  2、本科及以上学历，统计，数学，信息技术，经济等相关专业硕士优先<br />
+                  3、局部大数据的处理能力，掌握hive，SQL等相关数据提取工具，熟练操作excel，SAS/SPSS等工具<br />
+                  4、丰富的基于数据的，商业分析和行业分析经验<br />
+                  5、良好的抗压能力和横向沟通能力
+                </div>
+                <hr width="10%" />
+                <div class="lianxi">简历请投递至：<a href="mailto:hr@ichangtou.com">hr@ichangtou.com</a></div>
+              </div>
+              <!--/招聘-->
+            </div>
+            <!--/内容3-->
+
+            <!--内容4-->
+            <div class="item" id="c04">
+              <!--招聘-->
+              <div class="jobNei">
+                <div class="name">资深社区运营</div>
+                <div class="miaoshu">
+                  <h3 class="tit">职位描述：</h3>
+                  1.负责用户在课程训练营中的体验和再次消费。<br />
+                  2.负责管理兼职团队，领导团队实现目标。<br />
+                  3.策划、执行相关活动，提升对应数据指标；<br />
+                  4.分析用户数据和用户反馈，根据用户需求和运营需求促进产品优化；<br />
+                  5.领导交付的其他工作。
+                </div>
+                <div class="yaoqiu">
+                  <h3 class="tit">岗位要求：</h3>
+                  1.5年以上工作经验，有互联网金融行业或教育行业从业经验加分；<br />
+                  2.2年以上管理经验，管理幅度5人以上，有兼职团队管理经验优先；<br />
+                  2.以用户为中心，关注用户体验，对用户和用户需求有深刻理解，能服务好用户，与用户做朋友；<br />
+                  3.具备数据分析能力，并将分析结果体现到及时发现问题，以及后续运营改进上；<br />
+                  4.有激情，具备强大的自我驱动能力，以结果为导向。
+                </div>
+                <hr width="10%" />
+                <div class="lianxi">简历请投递至：<a href="mailto:hr@ichangtou.com">hr@ichangtou.com</a></div>
+              </div>
+              <!--/招聘-->
+            </div>
+            <!--/内容4-->
+
+            <!--内容5-->
+            <div class="item" id="c05">
+              <!--招聘-->
+              <div class="jobNei">
+                <div class="name">招聘主管/专员</div>
+                <div class="miaoshu">
+                  <h3 class="tit">职位描述：</h3>
+                  1、 收集并深刻理解用人部门和公司的用人需求；<br />
+                  2、 根据公司的招聘计划，实施招聘工作，负责简历筛选、面试通知、面试接待、录用流程等各环节；<br />
+                  3、 开拓、维护、优化有效招聘渠道，充分利用各招聘渠道为公司获取所需人才；<br />
+                  4、 定期与新入职员工保持互动，做好员工关系维护，积极引导员工适应新环境；<br />
+                  5、 配合校园招聘，与各大高等院校保持良好的合作关系；<br />
+                  6、 建立建全企业人才库，主动了解业内人才的动态信息；<br />
+                  7、定期对招聘效果进行分析评估，提高招聘效率。
+                </div>
+                <div class="yaoqiu">
+                  <h3 class="tit">岗位要求：</h3>
+                  1、 1-2年招聘工作经验，销售经验亦可；<br />
+                  2、 思维清晰，较强的亲和力，优秀的沟通协调能力；<br />
+                  3、 熟悉招聘流程，精通招聘、甄选的专业技能和技巧，了解基本的人才测评技术；<br />
+                  4、 有互联网行业招聘工作经验者优先。
+                </div>
+                <hr width="10%" />
+                <div class="lianxi">简历请投递至：<a href="mailto:hr@ichangtou.com">hr@ichangtou.com</a></div>
+              </div>
+              <!--/招聘-->
+            </div>
+            <!--/内容5-->
+
+            <!--内容5-->
+            <div class="item" id="c06">
+              <!--招聘-->
+              <div class="jobNei">
+                <div class="name">课程开发经理（育儿）</div>
+                <div class="miaoshu">
+                  <h3 class="tit">职位描述：</h3>
+                  1、负责在线课程产品的规划、研发，建立与完善课程体系；<br />
+                  2、从用户出发，研究与把控对外输出的内容风格与质量；<br />
+                  3、管理相应团队, 优化团队工作流程，激发团队热情和凝聚力。
+                </div>
+                <div class="yaoqiu">
+                  <h3 class="tit">岗位要求：</h3>
+                  1. 编辑、新闻等相关专业本科或以上学历；在网络媒体或传统媒体有2年以上内容主编工作经验；<br />
+                  2.
+                  深厚的文字写作功底及文字驾驭能力，思维活跃，思路清晰，新闻敏感性强，有出色的选题及专题策划和信息采编能力；掌握新闻、评论等各类题材文章的撰写，有较强的表达能力、写作能力与分析能力，理解沟通能力强；具有敏锐的市场洞察力<br />
+                  4. 具备段子手及标题党的能力，文案能力非同一般； <br />
+                  5. 富有创业精神，创造力和激情，工作主动性强、责任心强、重视团队合作<br />
+                  6. 有创投、财经类、亲子教育、家庭育儿等媒体从业经历优先。<br />
+                  注：请附带主持编辑策划的相关作品一份。
+                </div>
+                <hr width="10%" />
+                <div class="lianxi">简历请投递至：<a href="mailto:hr@ichangtou.com">hr@ichangtou.com</a></div>
+              </div>
+              <!--/招聘-->
+
+              <!--招聘-->
+              <div class="jobNei">
+                <div class="name">游戏产品策划</div>
+                <div class="miaoshu">
+                  <h3 class="tit">职位描述：</h3>
+                  1、负责小游戏产品的整体策划、数值系统等策划工作；<br />
+                  2、负责团队中与技术、美术沟通协作跟进等工作；<br />
+                  3、需要参与小游戏的玩法、数值、美术风格定位等工作。
+                </div>
+                <div class="yaoqiu">
+                  <h3 class="tit">岗位要求：</h3>
+                  1、熟悉休闲游戏，小游戏，社交小游戏等有深入的了解和独到的见解；<br />
+                  2、热爱游戏制作，3年以上游戏行业经验，做为游戏制作人主导过至少一款成功上线的游戏产品；<br />
+                  3、有休闲游戏、社交类游戏、微信小程序小游戏成功上线策划项目优先考虑；<br />
+                  4、熟悉各种类型小游戏，敏捷类、休闲类、策略类、挑战类、消除类、射击类等；<br />
+                  5、拥有完整的项目立项、项目管理、项目跟进的经验和能力者优先考虑。
+                </div>
+                <hr width="10%" />
+                <div class="lianxi">简历请投递至：<a href="mailto:hr@ichangtou.com">hr@ichangtou.com</a></div>
+              </div>
+              <!--/招聘-->
+            </div>
+            <!--/内容5-->
+          </div>
+          <script>
+            function IsPC() {
+              var userAgentInfo = navigator.userAgent;
+              var Agents = ["Android", "iPhone",
+                "SymbianOS", "Windows Phone",
+                "iPad", "iPod"
+              ];
+              var flag = true;
+              for (var v = 0; v < Agents.length; v++) {
+                if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                  flag = false;
+                  break;
+                }
+              }
+              return flag;
+            };
+            $(document).ready(function () {
+              var isPC = IsPC();
+              if (isPC) {
+
+                //这里执行的是PC端的代码；
+                $('.jobMain .ItemBox .item').eq(0).show();
+                $('.jobNav ul li a').click(function () {
+                  var _this = $(this).parents('li');
+                  _this.addClass('on').siblings('li').removeClass('on');
+                  $('.jobMain .ItemBox .item').eq(_this.index()).fadeIn().siblings('.item').hide();
+                })
+
+
+              } else {
+
+                //这里执行的是移动端的代码；
+                //导航滑动
+                $('.jobNav ul').slick({
+                  dots: false,
+                  infinite: true,
+                  speed: 300,
+                  slidesToShow: 3,
+                  slidesToScroll: 1,
+                  prevArrow: false,
+                  nextArrow: false,
+                });
+
+
+                //tab切换
+                function scrollDoor() {}
+                scrollDoor.prototype = {
+                  sd: function (menus, divs, openClass, closeClass) {
+                    var _this = this;
+                    if (menus.length != divs.length) {
+                      alert("菜单层数量和内容层数量不一样!");
+                      return false;
+                    }
+                    for (var i = 0; i < menus.length; i++) {
+                      _this.$(menus[i]).value = i;
+                      _this.$(menus[i]).onmouseover = function () {
+                        for (var j = 0; j < menus.length; j++) {
+                          _this.$(menus[j]).className = closeClass;
+                          _this.$(divs[j]).style.display = "none";
+                        }
+                        _this.$(menus[this.value]).className = openClass;
+                        _this.$(divs[this.value]).style.display = "block";
+                      }
+                    }
+                  },
+                  $: function (oid) {
+                    if (typeof (oid) == "string")
+                      return document.getElementById(oid);
+                    return oid;
+                  }
+                }
+                window.onload = function () {
+                  var SDmodel = new scrollDoor();
+                  SDmodel.sd(["m01", "m02", "m03", "m04", "m05", "m06"], ["c01", "c02", "c03", "c04", "c05",
+                    "c06"
+                  ]);
+                }
+
+              }
+            });
+          </script>
+          <!--切换内容-->
+        </div>
+      </div>
+      <!--/人才招聘-->
+
+
+    </div>
+  </section>
+  <!--网页主体部分-->
+
+  <div class="clear"></div>
+
+  <!--底部-->
+  <footer class="footer">
+    <div class="container">
+      © All Rights Reserved 上海昌投网络科技有限公司 |
+      <a class="ahref" href="http://www.miitbeian.gov.cn">沪ICP备13007095号</a> |
+      <a class="ahref" href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31011502008402">沪公网安备 31011502008402号</a> <br />
+      <br />
+      公司地址：上海市浦东新区龙东大道3000号10号楼弘源科创大厦6F&nbsp;&nbsp;&nbsp;&nbsp;客服电话：021-58953739
+    </div>
+  </footer>
+  <!--/底部-->
+</body>
+
+</html>
